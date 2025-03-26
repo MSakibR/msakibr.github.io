@@ -79,17 +79,6 @@ function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
 
-//opening animation
-document.addEventListener("DOMContentLoaded", () => {
-  // Hide the main content initially
-  document.getElementById("mainContent").style.display = "none";
-});
-
-// responsive
-function toggleMenu() {
-  document.querySelector(".navbar").classList.toggle("show");
-}
-
 // tap highlight
 document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll(".nav-link");
@@ -134,5 +123,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// hamburger-menu
+document.addEventListener("DOMContentLoaded", function () {
+  const menuButton = document.querySelector(".hamburger-menu");
+  const navbar = document.querySelector(".navbar");
+
+  menuButton.addEventListener("click", function () {
+    navbar.classList.toggle("show");
+  });
+});
 
 
