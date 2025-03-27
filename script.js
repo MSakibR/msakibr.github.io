@@ -143,49 +143,43 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Typing speed in ms  Check if screen width is smaller than 768px
-const baseText = "Hi, I am ";
-const changingText = "M Sakib Rahman";
-const speed = 100;
-const eraseSpeed = 50;
-const delayBeforeErase = 1500;
-const delayBeforeRewrite = 800;
+// Typing speed in ms
+const baseText = " Hi, I am "; // Static part
+const changingText = "M Sakib Rahman"; // The part that erases & rewrites
+const speed = 100; // Typing speed in ms
+const eraseSpeed = 50; // Erasing speed
+const delayBeforeErase = 1500; // Pause before erasing
+const delayBeforeRewrite = 800; // Pause before retyping
 let i = 0;
 let isDeleting = false;
-let currentText = baseText;
+let currentText = baseText; // Start with base text
 
 function typeEffect() {
   const h1Element = document.querySelector(".hi");
 
-  // Check if screen width is smaller than 768px
-  if (window.innerWidth <= 730) {
-    // If screen is small, stop the animation and set the text directly
-    h1Element.textContent = baseText + changingText;
-    return; // Exit the function, so the animation does not run
-  }
-
-  // Regular animation logic if screen width is greater than 768px
   if (!isDeleting && i < changingText.length) {
+    // Typing "M Sakib Rahman"
     currentText = baseText + changingText.substring(0, i + 1);
     i++;
     setTimeout(typeEffect, speed);
   } else if (!isDeleting && i === changingText.length) {
+    // Pause before erasing
     setTimeout(() => {
       isDeleting = true;
       typeEffect();
     }, delayBeforeErase);
   } else if (isDeleting && i > 0) {
+    // Erasing "M Sakib Rahman"
     currentText = baseText + changingText.substring(0, i - 1);
     i--;
     setTimeout(typeEffect, eraseSpeed);
   } else if (isDeleting && i === 0) {
+    // Pause before retyping
     isDeleting = false;
     setTimeout(typeEffect, delayBeforeRewrite);
   }
 
-  h1Element.textContent = currentText;
+  h1Element.textContent = currentText; // Update the text in <h1>
 }
 
-// Initialize animation on page load
 document.addEventListener("DOMContentLoaded", typeEffect);
-
