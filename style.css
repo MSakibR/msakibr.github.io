@@ -167,8 +167,22 @@ header {
   line-height: 1.6;
 }
 .hi {
-  color: rgb(6, 146, 211);
   font-weight: bold; /* Optional, to make it stand out more */
+  font-family: "Fira Code", monospace;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  color: #5cbef7;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #5cbef7; /* Cursor effect */
+  width: fit-content;
+  animation: blinkCursor 0.8s infinite;
+}
+@keyframes blinkCursor {
+  50% {
+    border-color: transparent;
+  }
 }
 
 /* GitHub Button */
@@ -715,6 +729,12 @@ footer {
 
   .social-icons a:hover {
     color: rgb(2, 98, 122); /* Optional: Darker red on hover */
+  }
+
+  /* Heading Text */
+  .hi {
+    margin-left: 18px;
+    margin-bottom: 10px;
   }
 
   /* Container and Sections */
