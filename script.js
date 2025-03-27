@@ -128,9 +128,60 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuButton = document.querySelector(".hamburger-menu");
   const navbar = document.querySelector(".navbar");
 
-  menuButton.addEventListener("click", function () {
+  // Toggle the navbar visibility when clicking the hamburger menu
+  menuButton.addEventListener("click", function (event) {
     navbar.classList.toggle("show");
+    event.stopPropagation(); // Prevent the click event from propagating
+  });
+
+  // Close the navbar when clicking outside of it
+  document.addEventListener("click", function (event) {
+    if (!navbar.contains(event.target) && !menuButton.contains(event.target)) {
+      navbar.classList.remove("show");
+    }
   });
 });
+
+
+// Typing speed in ms
+const baseText = " Hi, I am "; // Static part
+const changingText = "M Sakib Rahman"; // The part that erases & rewrites
+const speed = 100; // Typing speed in ms
+const eraseSpeed = 50; // Erasing speed
+const delayBeforeErase = 1500; // Pause before erasing
+const delayBeforeRewrite = 800; // Pause before retyping
+let i = 0;
+let isDeleting = false;
+let currentText = baseText; // Start with base text
+
+function typeEffect() {
+  const h1Element = document.querySelector(".hi");
+
+  if (!isDeleting && i < changingText.length) {
+    // Typing "M Sakib Rahman"
+    currentText = baseText + changingText.substring(0, i + 1);
+    i++;
+    setTimeout(typeEffect, speed);
+  } else if (!isDeleting && i === changingText.length) {
+    // Pause before erasing
+    setTimeout(() => {
+      isDeleting = true;
+      typeEffect();
+    }, delayBeforeErase);
+  } else if (isDeleting && i > 0) {
+    // Erasing "M Sakib Rahman"
+    currentText = baseText + changingText.substring(0, i - 1);
+    i--;
+    setTimeout(typeEffect, eraseSpeed);
+  } else if (isDeleting && i === 0) {
+    // Pause before retyping
+    isDeleting = false;
+    setTimeout(typeEffect, delayBeforeRewrite);
+  }
+
+  h1Element.textContent = currentText; // Update the text in <h1>
+}
+
+document.addEventListener("DOMContentLoaded", typeEffect);
 
 
