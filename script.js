@@ -158,7 +158,7 @@ function typeEffect() {
   const h1Element = document.querySelector(".hi");
 
   // Check if screen width is smaller than 768px
-  if (window.innerWidth <= 730 || window.innerHeight <= 1530) {
+  if (window.innerWidth <= 730) {
     // If screen is small, stop the animation and set the text directly
     h1Element.textContent = baseText + changingText;
     return; // Exit the function, so the animation does not run
