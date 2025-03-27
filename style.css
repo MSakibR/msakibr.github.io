@@ -733,8 +733,9 @@ footer {
 
   /* Heading Text */
   .hi {
-    margin-left: 18px;
+    margin-left: 52px;
     margin-bottom: 10px;
+    font-size: 18px;
   }
 
   /* Container and Sections */
