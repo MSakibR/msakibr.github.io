@@ -185,6 +185,7 @@ header {
   }
 }
 
+
 /* GitHub Button */
 .github-btn {
   display: inline-flex;
@@ -456,6 +457,19 @@ h4 {
   animation: fadeIn 1s ease-in-out;
   transition: transform 0.3s;
 }
+.sep {
+  text-decoration: none; /* Remove underline */
+  color: white;
+  display: inline-block; /* To make it behave like a button */
+  padding: 10px 20px; /* Add padding for button effect */
+  border: 2px solid #0f363b; /* Button border */
+  border-radius: 5px; /* Rounded corners */
+  margin-top: 10px;
+  background-color: transparent; /* Transparent background */
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
 .contact-info h2 {
   font-size: 32px; /* Make font bigger */
   font-weight: bold;
@@ -473,9 +487,9 @@ h4 {
   background-color: #00bcd4; /* Color of the underline */
   margin: 5px auto 0; /* Center the underline */
 }
-.contact-info:hover {
+.contact-info:hover{
   transform: translateY(-10px);
-  background: rgb(5, 163, 84);
+  background: rgb(5, 163, 84)
 }
 .chat-box {
   /* Right Side: Chat Box */
@@ -710,7 +724,7 @@ footer {
     z-index: 1100;
     cursor: pointer;
   }
-
+ 
   /* Social Icons */
   .social-icons {
     margin: 1px;
