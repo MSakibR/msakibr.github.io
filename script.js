@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0, rootMargin: "0px 0px -50px 0px" },
   );
 
   sections.forEach((section) => {
@@ -63,19 +63,36 @@ document.querySelectorAll(".faq-question").forEach((question) => {
   });
 });
 
-// Function to open modal with specific content
-function openModal(header, description) {
-  // Set modal content dynamically
-  document.getElementById("modal-header").innerText = header;
+
+const researchReports = {
+  "Solar-Powered Smart Irrigation System with IoT":
+    "media/Research_1/Solar_Irrigation_Report.pdf",
+  "Federated Learning: A Privacy-Preserving Approach in AI":
+    "media/Research_2/Federated_Learning_Report.pdf",
+  "BanglaAccento: Bangla Regional Dialect Speech Recognition System": null,
+  "Visual Grounding Repair for Multimodal Large Language Models (MLLMs)": null,
+  "Shutki Vision: A Visual Dataset of Traditional Bengali Dried Fish": null,
+};
+
+function openModal(title, description) {
+  document.getElementById("modal-header").innerText = title;
   document.getElementById("modal-description").innerText = description;
 
-  // Show the modal
+  const reportBtn = document.getElementById("download-report");
+  const reportPath = researchReports[title];
+
+  if (reportPath) {
+    reportBtn.href = reportPath;
+    reportBtn.style.display = "inline-block";
+  } else {
+    reportBtn.style.display = "none";
+  }
+
   document.getElementById("modal").style.display = "flex";
 }
 
-// Function to close the modal
+// Function to close modal
 function closeModal() {
-  // Hide the modal
   document.getElementById("modal").style.display = "none";
 }
 
@@ -122,7 +139,6 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", changeActiveLink);
 });
 
-
 // hamburger-menu
 document.addEventListener("DOMContentLoaded", function () {
   const menuButton = document.querySelector(".hamburger-menu");
@@ -141,7 +157,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
 
 // Typing speed in ms
 const baseText = " Hi, I am "; // Static part
@@ -183,3 +198,206 @@ function typeEffect() {
 }
 
 document.addEventListener("DOMContentLoaded", typeEffect);
+
+document.getElementById("send-message").addEventListener("click", function () {
+  const email = document.getElementById("visitor-email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  // Function to show popup notification
+  function showNotification(message, isError = false) {
+    const notification = document.getElementById("notification");
+    notification.textContent = message;
+    notification.className = "notification show"; // reset classes
+    if (isError) notification.classList.add("error");
+
+    // Hide after 3 seconds
+    setTimeout(() => {
+      notification.classList.remove("show");
+    }, 3000);
+  }
+
+  if (!email || !message) {
+    showNotification("Please enter email and message.", true);
+    return;
+  }
+
+  emailjs
+    .send("service_79gsum7", "template_6yfqns5", {
+      email: email,
+      message: message,
+    })
+    .then(function () {
+      showNotification("Message sent successfully!");
+      document.getElementById("visitor-email").value = "";
+      document.getElementById("message").value = "";
+    })
+    .catch(function () {
+      showNotification("Failed to send message!", true);
+    });
+});
+
+// Achievement Slider
+let currentIndex = 0;
+const slides = document.querySelectorAll(".slider-wrapper .achievement-card");
+
+function showSlide(index) {
+  const wrapper = document.querySelector(".slider-wrapper");
+  if (index >= slides.length) currentIndex = 0;
+  else if (index < 0) currentIndex = slides.length - 1;
+  else currentIndex = index;
+
+  wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function nextSlide() {
+  showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+  showSlide(currentIndex - 1);
+}
+
+// Optional: Auto-slide every 5 seconds
+setInterval(() => {
+  nextSlide();
+}, 5000);
+
+// Gallery Modal
+const galleryModal = document.getElementById("gallery-modal");
+const viewAllBtn = document.getElementById("view-all-btn");
+
+viewAllBtn.onclick = function () {
+  galleryModal.style.display = "block";
+};
+
+function closeGallery() {
+  galleryModal.style.display = "none";
+}
+
+// Close modal when clicking outside
+window.onclick = function (event) {
+  if (event.target == galleryModal) {
+    galleryModal.style.display = "none";
+  }
+};
+
+// Gallery Modal
+function closeGallery() {
+  document.getElementById("gallery-modal").style.display = "none";
+}
+
+// Lightbox functionality
+const lightboxModal = document.getElementById("lightbox-modal");
+const lightboxImg = document.querySelector(".lightbox-img");
+
+function openLightbox(img) {
+  lightboxModal.style.display = "flex";
+  lightboxImg.src = img.src;
+}
+
+function closeLightbox() {
+  lightboxModal.style.display = "none";
+}
+
+// Close lightbox when clicking outside image
+lightboxModal.onclick = function (e) {
+  if (e.target === lightboxModal) closeLightbox();
+};
+
+function filterProjects(category) {
+  let cards = document.querySelectorAll(".project-card");
+  let buttons = document.querySelectorAll(".filter-buttons button");
+
+  buttons.forEach((btn) => btn.classList.remove("active"));
+  event.target.classList.add("active");
+
+  cards.forEach((card) => {
+    card.style.display =
+      category === "all" || card.dataset.category === category
+        ? "block"
+        : "none";
+  });
+}
+
+function filterMLProjects(category, btn) {
+  const mlCards = document.querySelectorAll("#ml-projects .project-card");
+  const mlText = document.getElementById("ml-custom-text");
+  const buttons = btn.parentElement.querySelectorAll("button");
+
+  // Active button style
+  buttons.forEach((b) => b.classList.remove("active"));
+  btn.classList.add("active");
+
+  // Hide everything by default
+  mlCards.forEach((card) => (card.style.display = "none"));
+  mlText.style.display = "none";
+
+  // Show Library cards or Custom text
+  if (category === "ml-library") {
+    mlCards.forEach((card) => (card.style.display = "block"));
+  } else if (category === "ml-custom") {
+    mlText.style.display = "block";
+  }
+}
+
+// Orbiting Icons
+const icons = document.querySelectorAll(".orbit li");
+const image = document.querySelector(".circular-image img");
+
+function floatOrbit() {
+  if (window.innerWidth <= 768) return; // ⛔ disable on mobile
+  const imgWidth = image.offsetWidth;
+  const imgHeight = image.offsetHeight;
+  const centerX = imgWidth / 2;
+  const centerY = imgHeight / 2;
+
+  // Adjust radii: taller and slightly narrower
+  const rx = centerX * 0.98; // horizontal slightly smaller
+  const ry = centerY * 1.2; // vertical slightly taller
+  const offsetY = -15; // lift orbit a bit upward
+
+  icons.forEach((icon, i) => {
+    let angle = (i / icons.length) * 2 * Math.PI;
+
+    function move() {
+      angle += 0.01; // rotation speed
+      const x = rx * Math.cos(angle);
+      const y = ry * Math.sin(angle) + offsetY; // move orbit slightly up
+      icon.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+      requestAnimationFrame(move);
+    }
+
+    move();
+  });
+}
+
+// Start floating orbit
+floatOrbit();
+
+// Recalculate if window resizes
+window.addEventListener("resize", floatOrbit);
+
+function filterMLProjects(category, button) {
+  // 1. Update active class on filter buttons
+  const filterButtons = document.querySelectorAll(
+    "#ml-projects .filter-buttons button",
+  );
+  filterButtons.forEach((btn) => btn.classList.remove("active"));
+  button.classList.add("active");
+
+  // 2. Select all project cards inside the ML grid
+  const cards = document.querySelectorAll("#mlProjectGrid .project-card");
+
+  // 3. Show / Hide cards based on category
+  cards.forEach((card) => {
+    const cardCategory = card.getAttribute("data-category");
+
+    if (category === "all" || cardCategory === category) {
+      card.classList.remove("hide");
+      card.classList.add("show");
+    } else {
+      card.classList.remove("show");
+      card.classList.add("hide");
+    }
+  });
+}
