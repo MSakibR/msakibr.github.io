@@ -304,14 +304,20 @@ lightboxModal.onclick = function (e) {
   if (e.target === lightboxModal) closeLightbox();
 };
 
-function filterProjects(category) {
-  let cards = document.querySelectorAll(".project-card");
-  let buttons = document.querySelectorAll(".filter-buttons button");
+function filterProjects(category, btn) {
+  const buttons = document.querySelectorAll(".filter-buttons button");
+  buttons.forEach((b) => b.classList.remove("active"));
 
-  buttons.forEach((btn) => btn.classList.remove("active"));
-  event.target.classList.add("active");
+  if (btn) {
+    btn.classList.add("active");
+  } else if (event && event.target) {
+    event.target.classList.add("active");
+  }
 
+  const cards = document.querySelectorAll(".project-card");
   cards.forEach((card) => {
+    if (card.closest("#ml-projects")) return;
+
     card.style.display =
       category === "all" || card.dataset.category === category
         ? "block"
@@ -322,21 +328,20 @@ function filterProjects(category) {
 function filterMLProjects(category, btn) {
   const mlCards = document.querySelectorAll("#ml-projects .project-card");
   const mlText = document.getElementById("ml-custom-text");
-  const buttons = btn.parentElement.querySelectorAll("button");
 
-  // Active button style
-  buttons.forEach((b) => b.classList.remove("active"));
-  btn.classList.add("active");
+  if (btn) {
+    const buttons = btn.parentElement.querySelectorAll("button");
+    buttons.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+  }
 
-  // Hide everything by default
   mlCards.forEach((card) => (card.style.display = "none"));
-  mlText.style.display = "none";
+  if (mlText) mlText.style.display = "none";
 
-  // Show Library cards or Custom text
-  if (category === "ml-library") {
+  if (category === "all" || category === "ml-library") {
     mlCards.forEach((card) => (card.style.display = "block"));
   } else if (category === "ml-custom") {
-    mlText.style.display = "block";
+    if (mlText) mlText.style.display = "block";
   }
 }
 
