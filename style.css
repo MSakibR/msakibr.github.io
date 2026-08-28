@@ -1733,7 +1733,7 @@ footer {
   margin-right: 8px;
 }
 .huggingface-btn:hover {
-  background-color: #000;
+  background-color: #8d680a;
   transform: scale(1.1);
 }
 .huggingface-btn:active {
