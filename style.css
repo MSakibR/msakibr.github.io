@@ -1796,3 +1796,61 @@ footer {
   background: #1b8a52;
   box-shadow: 0 0 10px rgba(34, 170, 102, 0.5);
 }
+
+.scholar-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.scholar-btn i {
+  margin-right: 8px;
+}
+
+.scholar-btn:hover {
+  background-color: #2b6cb0;
+  transform: scale(1.1);
+}
+
+.scholar-btn:active {
+  transform: scale(1);
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;       
+    gap: 12px 16px;        
+    align-items: center;
+    margin-top: 20px;       
+}
+
+
+.github-btn,
+.huggingface-btn,
+.scholar-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0;             
+}
+
+@media (max-width: 600px) {
+    .button-group {
+        justify-content: center; 
+        gap: 12px;         
+    }
+}
+
