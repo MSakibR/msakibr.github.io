@@ -63,7 +63,6 @@ document.querySelectorAll(".faq-question").forEach((question) => {
   });
 });
 
-
 const researchReports = {
   "Solar-Powered Smart Irrigation System with IoT":
     "media/Research_1/Solar_Irrigation_Report.pdf",
@@ -404,5 +403,277 @@ function filterMLProjects(category, button) {
       card.classList.remove("show");
       card.classList.add("hide");
     }
+  });
+}
+
+/* ================= FLOATING RESUME MENU ================= */
+
+const resumeToggle = document.getElementById("resumeToggle");
+const resumeMenu = document.getElementById("resumeMenu");
+
+resumeToggle.addEventListener("click", function (event) {
+  event.stopPropagation();
+
+  resumeMenu.classList.toggle("active");
+});
+
+/* Close when clicking outside */
+
+document.addEventListener("click", function (event) {
+  if (
+    !resumeMenu.contains(event.target) &&
+    !resumeToggle.contains(event.target)
+  ) {
+    resumeMenu.classList.remove("active");
+  }
+});
+
+/* ================= SKILLS DATA ================= */
+
+const skillsData = {
+  programming: {
+    title: "Programming Languages",
+
+    skills: [
+      ["devicon-java-plain colored", "Java"],
+      ["devicon-python-plain colored", "Python"],
+      ["devicon-c-plain colored", "C"],
+      ["devicon-cplusplus-plain colored", "C++"],
+      ["devicon-javascript-plain colored", "JavaScript"],
+      ["devicon-assembly-plain", "Assembly"],
+    ],
+  },
+
+  libraries: {
+    title: "Libraries & Tools",
+
+    skills: [
+      ["devicon-jupyter-plain colored", "Jupyter Notebook"],
+      ["devicon-anaconda-original colored", "Conda"],
+      ["devicon-selenium-original colored", "Selenium"],
+      ["devicon-postman-plain colored", "Postman"],
+      ["devicon-cisco-plain colored", "Cisco Packet Tracer"],
+      ["devicon-react-original colored", "React"],
+      ["devicon-tailwindcss-original colored", "Tailwind CSS"],
+      ["devicon-latex-original", "LaTeX"],
+      ["devicon-java-plain colored", "JavaFX"],
+    ],
+  },
+
+  "machine-learning": {
+    title: "Machine Learning & Deep Learning",
+
+    skills: [
+      ["devicon-numpy-original colored", "NumPy"],
+      ["devicon-pandas-plain colored", "Pandas"],
+      ["devicon-scikitlearn-plain colored", "Scikit-learn"],
+      ["devicon-tensorflow-original colored", "TensorFlow"],
+      ["devicon-keras-plain colored", "Keras"],
+      ["devicon-pytorch-original colored", "PyTorch"],
+      ["devicon-opencv-plain colored", "OpenCV"],
+    ],
+  },
+
+  database: {
+    title: "Database Technologies",
+
+    skills: [
+      ["devicon-mysql-plain colored", "MySQL"],
+      ["devicon-microsoftsqlserver-plain colored", "MS SQL"],
+      ["devicon-mongodb-plain colored", "MongoDB"],
+    ],
+  },
+
+  frameworks: {
+    title: "Frameworks",
+
+    skills: [
+      ["devicon-django-plain colored", "Django"],
+      ["devicon-nextjs-plain", "Next.js"],
+      ["devicon-react-original colored", "MERN Development"],
+      ["devicon-reactnative-original colored", "React Native"],
+    ],
+  },
+
+  other: {
+    title: "Other Skills",
+
+    skills: [
+      ["fas fa-cubes", "Object-Oriented Programming"],
+      ["devicon-linux-plain", "Linux"],
+      ["fas fa-code", "Data Structures & Algorithms"],
+      ["fas fa-layer-group", "Software Design Patterns"],
+      ["fas fa-microchip", "Microcontrollers & IoT"],
+      ["fas fa-brain", "Machine Learning Fundamentals"],
+      ["fas fa-chart-line", "Classification & Regression"],
+      ["fas fa-project-diagram", "Clustering & Unsupervised Learning"],
+      ["fas fa-search", "k-Nearest Neighbors"],
+      ["fas fa-network-wired", "Artificial Neural Networks"],
+      ["fas fa-eye", "Convolutional Neural Networks"],
+      ["fas fa-wave-square", "Recurrent Neural Networks"],
+      ["devicon-git-plain colored", "Git"],
+      ["devicon-github-original", "GitHub"],
+      ["fas fa-tasks", "Project Management"],
+      ["fas fa-users", "Teamwork"],
+      ["fas fa-clock", "Time Management"],
+      ["fas fa-user-tie", "Leadership"],
+    ],
+  },
+};
+
+/* ================= MODAL ELEMENTS ================= */
+
+const skillsModal = document.getElementById("skillsModal");
+
+const modalTitle = document.getElementById("modalTitle");
+
+const modalSkills = document.getElementById("modalSkills");
+
+const modalClose = document.getElementById("skillsModalClose");
+
+const modalOverlay = document.querySelector(".skills-modal-overlay");
+
+/* ================= OPEN MODAL ================= */
+
+document.querySelectorAll(".skills-category-card").forEach((card) => {
+  card.addEventListener("click", () => {
+    const category = card.dataset.category;
+
+    const data = skillsData[category];
+
+    if (!data) return;
+
+    /* Title */
+
+    modalTitle.textContent = data.title;
+
+    /* Clear previous skills */
+
+    modalSkills.innerHTML = "";
+
+    /* Add skills */
+
+    data.skills.forEach((skill) => {
+      const skillElement = document.createElement("div");
+
+      skillElement.className = "modal-skill";
+
+      skillElement.innerHTML = `
+                <i class="${skill[0]}"></i>
+                <span>${skill[1]}</span>
+            `;
+
+      modalSkills.appendChild(skillElement);
+    });
+
+    /* Open */
+
+    skillsModal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+  });
+});
+
+/* ================= CLOSE MODAL ================= */
+
+function closeSkillsModal() {
+  skillsModal.classList.remove("active");
+
+  document.body.style.overflow = "";
+}
+
+modalClose.addEventListener("click", closeSkillsModal);
+
+modalOverlay.addEventListener("click", closeSkillsModal);
+
+/* ================= ESC KEY ================= */
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && skillsModal.classList.contains("active")) {
+    closeSkillsModal();
+  }
+});
+
+/* ================= CONTACT TABS ================= */
+
+const contactTabs = document.querySelectorAll(".contact-tab");
+
+const contactPanels = document.querySelectorAll(".contact-panel");
+
+contactTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = tab.dataset.contact;
+
+    /* Remove active from buttons */
+
+    contactTabs.forEach((item) => {
+      item.classList.remove("active");
+    });
+
+    /* Remove active from panels */
+
+    contactPanels.forEach((panel) => {
+      panel.classList.remove("active");
+    });
+
+    /* Activate clicked button */
+
+    tab.classList.add("active");
+
+    /* Activate corresponding panel */
+
+    const targetPanel = document.getElementById(`contact-${target}`);
+
+    if (targetPanel) {
+      targetPanel.classList.add("active");
+    }
+  });
+});
+
+/* ================= NAVBAR SCROLL EFFECT ================= */
+
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+/* =========================================
+   MOBILE NAVBAR
+========================================= */
+
+const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+mobileMenuBtn.addEventListener("click", () => {
+  mobileMenuBtn.classList.toggle("active");
+  mobileMenu.classList.toggle("active");
+});
+
+/* Close menu after clicking a link */
+
+document.querySelectorAll(".mobile-menu a").forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileMenuBtn.classList.remove("active");
+    mobileMenu.classList.remove("active");
+  });
+});
+
+/* Close mobile menu when clicking outside */
+
+document.addEventListener("click", (event) => {
+  if (!navbar.contains(event.target)) {
+    mobileMenuBtn.classList.remove("active");
+    mobileMenu.classList.remove("active");
+  }
+});
+
+function goToContact() {
+  document.getElementById("contact").scrollIntoView({
+    behavior: "smooth",
   });
 }
