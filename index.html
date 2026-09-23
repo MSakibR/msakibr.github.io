@@ -42,21 +42,98 @@
                 class="fab fa-instagram"></i></a>
     </div>
 
+    <div class="social-icons right-social-icons">
+
+        <a href="https://github.com/MSakibR" class="icon" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+
+        <a href="https://huggingface.co/sakib04" class="icon" target="_blank" aria-label="Hugging Face">
+            <span class="hf-emoji">🤗</span>
+        </a>
+
+        <a href="https://scholar.google.com/citations?user=_HmyJE4AAAAJ&hl=en" class="icon" target="_blank"
+            aria-label="Google Scholar">
+            <i class="fas fa-graduation-cap"></i>
+        </a>
+
+    </div>
+
     <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
     <!-- Navbar -->
     <div class="container">
-        <nav class="navbar">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#education" class="nav-link">Education</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#works" class="nav-link">Works</a>
-            <a href="#experience" class="nav-link">Experience</a>
-            <a href="#research" class="nav-link">Research</a>
-            <a href="#achievements" class="nav-link">Achievements</a>
-            <a href="#contact" class="nav-link">Contact</a>
-            <li class="cv-nav-link">
-                <a href="#contact" class="cv-button">View CV</a>
-            </li>
+        <nav class="navbar" id="navbar">
+
+            <!-- DESKTOP NAVBAR -->
+            <div class="nav-full">
+
+                <a href="#about" class="nav-link">About</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#works" class="nav-link">Works</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#research" class="nav-link">Research</a>
+                <a href="#achievements" class="nav-link">Achievements</a>
+                <a href="#contact" class="nav-link">Contact</a>
+
+            </div>
+
+
+            <!-- DESKTOP COMPACT -->
+            <div class="nav-compact">
+                <span class="live-dot"></span>
+                <span>Available for Work</span>
+            </div>
+
+
+            <!-- MOBILE MENU BUTTON -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <!-- MOBILE MENU -->
+            <div class="mobile-menu" id="mobileMenu">
+
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#works">Works</a>
+                <a href="#experience">Experience</a>
+                <a href="#research">Research</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#contact">Contact</a>
+
+                <!-- MOBILE SOCIAL LINKS -->
+                <div class="mobile-social-links">
+
+                    <a href="https://github.com/MSakibR" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+
+                    <a href="https://huggingface.co/sakib04" target="_blank" aria-label="Hugging Face">
+                        <span class="mobile-hf">🤗</span>
+                        <span>Hugging Face</span>
+                    </a>
+
+                    <a href="https://scholar.google.com/citations?user=_HmyJE4AAAAJ&hl=en" target="_blank"
+                        aria-label="Google Scholar">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Google Scholar</span>
+                    </a>
+
+                </div>
+
+                <a href="#contact" class="mobile-cv">
+                    <i class="fas fa-file-alt"></i>
+                    View CV
+                </a>
+
+            </div>
+
         </nav>
         <header>
             <button id="theme-toggle"></button> <!-- Toggle -->
@@ -69,51 +146,32 @@
                     <div class="circular-image">
                         <img src="saku.jpg" alt="My Profile" type="image/png" />
                     </div>
-                    <ul class="orbit">
-                        <li><i class="devicon-html5-plain"></i></li>
-                        <li><i class="devicon-css3-plain"></i></li>
-                        <li><i class="devicon-javascript-plain"></i></li>
-                        <li><i class="devicon-python-plain"></i></li>
-                        <li><i class="devicon-react-original"></i></li>
-                        <li><i class="devicon-django-plain"></i></li>
-                        <li><i class="devicon-mysql-plain"></i></li>
-                        <li><i class="devicon-git-plain"></i></li>
-                        <li><i class="devicon-java-plain"></i></li>
-                        <li><i class="devicon-cplusplus-plain"></i></li>
-                        <li><i class="devicon-tailwindcss-plain"></i></li>
-                        <li><i class="devicon-linux-plain"></i></li>
-                    </ul>
+
                 </div>
                 <div class="about-text">
-                    <h2>About Me</h2>
+                    <h2>
+                        About Me
+                        <span class="developer-badge">Full Stack Developer</span>
+                    </h2>
 
                     <h1 class="hi"></h1>
 
                     <p class="spc">
 
-                        I am a passionate Computer Science and Engineering student with a strong interest in building
-                        impactful and scalable software solutions. With a solid foundation in backend development,
-                        problem-solving, and system design, I enjoy transforming complex ideas into efficient and
-                        reliable applications.
-
-                        My experience spans algorithm design, full-stack development, and modern technologies,
-                        where I focus on writing clean, maintainable, and performance-oriented code. I am particularly
-                        interested in areas such as Artificial Intelligence, Internet of Things (IoT), and cloud-based
-                        systems, and I continuously strive to expand my technical skill set.
-
-                        I see every challengeas an opportunity to grow and innovate. I am always eager to collaborate,
-                        learn from others,
-                        and contribute to meaningful projects that create real-world impact.
+                        I am a Computer Science & Engineering student passionate about building scalable, high-performance software solutions.
+                        With a solid foundation in backend development and full-stack technologies, I have strong knowledge in Machine Learning
+                        (ML), Deep Learning (DL), and Blockchain systems. Driven by complex challenges and clean architecture, I aim to create
+                        meaningful real-world impact through AI, IoT, and cloud systems. I am always open to new opportunities, collaborations, or technical discussions—feel free to reach out!
                     </p>
-                    <!-- GitHub Button -->
                     <div class="button-group">
-                        <a href="https://github.com/MSakibR" target="_blank" rel="me" class="github-btn">
+                        <a href="https://github.com/MSakibR" target="_blank" class="github-btn">
                             <i class="fab fa-github"></i> My GitHub
                         </a>
-                        <a href="https://huggingface.co/sakib04" target="_blank" rel="me" class="huggingface-btn">
+                        <a href="https://huggingface.co/sakib04" target="_blank" class="huggingface-btn">
                             <span class="hf-emoji">🤗</span> My Hugging Face
                         </a>
-                        <a href="https://scholar.google.com/citations?user=_HmyJE4AAAAJ&hl=en" target="_blank" rel="me" class="scholar-btn">
+                        <a href="https://scholar.google.com/citations?user=_HmyJE4AAAAJ&hl=en" target="_blank"
+                            class="scholar-btn">
                             <i class="fas fa-graduation-cap"></i> Google Scholar
                         </a>
                     </div>
@@ -121,379 +179,316 @@
             </div>
         </section>
 
-        <!-- education -->
+        <!-- ================= EDUCATION ================= -->
+
         <section id="education" class="section">
+
             <h2>Education</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>Secondary School Certificate (SSC) <p>Class of 2019</p>
-                    </h3>
-                    <p><strong>Group:</strong> Science </p>
-                    <p><strong>School:</strong> Police Lines High School, Faridpur, Bangladesh</p>
-                    <p>GPA: 5.00 (Out of 5.00)</p>
-                    <hr>
-                    <p>A two years program in science group. My most favourite subjects include Physics, Chemistry and
-                        Mathmatics.</p>
-                </div>
-                <div class="card">
-                    <h3>Higher Secondary Certificate (HSC) <p>Class of 2021</p>
-                    </h3>
-                    <p><strong>Group:</strong> Science </p>
-                    <p><strong>College:</strong> Govt Yasin College, Faridpur, Bangladesh</p>
-                    <p>GPA: 4.75 (Out of 5.00)</p>
-                    <hr>
-                    <p>A two years program in science group. My most favourite subjects include Physics, Chemistry and
-                        Mathmatics.</p>
-                </div>
-                <div class="card">
-                    <h3>Bachelor of Science in CSE (Ongoing)</h3>
-                    <p><strong>Batch:</strong> Class of 2023 — Present</p>
-                    <p><strong>Department:</strong> Computer Science and Engineering </p>
-                    <p><strong>University:</strong> University of Asia Pacific (UAP), Dhaka, Bangladesh</p>
-                    <p><strong>Current CGPA:</strong> 3.86 (Out of 4.00)</p>
-                    <hr>
-                    <p><strong>Thesis Area:</strong> Computer Vision and NLP</p>
-                    <p>A four-year Bachelor of Science in Engineering program (currently ongoing).
-                        Actively involved in academic and extracurricular activities.
 
-                    </p>
+            <div class="education-timeline">
+
+                <!-- SSC -->
+                <div class="education-item left">
+
+                    <div class="education-content">
+
+                        <span class="education-year">2019</span>
+
+                        <h3>Secondary School Certificate (SSC)</h3>
+
+                        <p><strong>Group:</strong> Science</p>
+
+                        <p>
+                            <strong>School:</strong>
+                            Police Lines High School, Faridpur, Bangladesh
+                        </p>
+
+                        <p><strong>GPA:</strong> 5.00 / 5.00</p>
+
+                        <hr>
+
+                        <p>
+                            A two years program in science group.
+                            My most favourite subjects include Physics,
+                            Chemistry and Mathematics.
+                        </p>
+
+                    </div>
+
+                    <div class="education-image">
+                        <img src="\Image\dhaka-education-board-logo-png_seeklogo-376333.png" alt="SSC">
+                    </div>
+
                 </div>
 
-                <div class="card">
-                    <h3>Master of Science in CSE (Future Plan)</h3>
-                    <p><strong>Status:</strong> Not yet enrolled</p>
-                    <p><strong>Intended Field:</strong> Computer Science and Engineering</p>
-                    <hr>
-                    <p><strong>Possible Thesis Areas:</strong> Computer Vision, NLP, Blockchain</p>
-                    <p>The Master of Science (M.Sc.) in CSE typically includes advanced-level coursework
-                        and research.
-                    </p>
+
+                <!-- HSC -->
+                <div class="education-item right">
+
+                    <div class="education-content">
+
+                        <span class="education-year">2021</span>
+
+                        <h3>Higher Secondary Certificate (HSC)</h3>
+
+                        <p><strong>Group:</strong> Science</p>
+
+                        <p>
+                            <strong>College:</strong>
+                            Govt Yasin College, Faridpur, Bangladesh
+                        </p>
+
+                        <p><strong>GPA:</strong> 4.75 / 5.00</p>
+
+                        <hr>
+
+                        <p>
+                            A two years program in science group.
+                            My most favourite subjects include Physics,
+                            Chemistry and Mathematics.
+                        </p>
+
+                    </div>
+
+                    <div class="education-image">
+                        <img src="\Image\dhaka-education-board-logo-png_seeklogo-376333.png" alt="HSC">
+                    </div>
+
+                </div>
+
+
+                <!-- Bachelor -->
+                <div class="education-item left">
+
+                    <div class="education-content">
+
+                        <span class="education-year">2023 — Present</span>
+
+                        <h3>Bachelor of Science in CSE</h3>
+
+                        <p>
+                            <strong>Department:</strong>
+                            Computer Science and Engineering
+                        </p>
+
+                        <p>
+                            <strong>University:</strong>
+                            University of Asia Pacific (UAP), Dhaka, Bangladesh
+                        </p>
+
+                        <p>
+                            <strong>Current CGPA:</strong>
+                            3.86 / 4.00
+                        </p>
+
+                        <hr>
+
+                        <p>
+                            <strong>Thesis Area:</strong>
+                            Computer Vision and NLP
+                        </p>
+
+                        <p>
+                            A four-year Bachelor of Science in Engineering
+                            program currently ongoing. Actively involved in
+                            academic and extracurricular activities.
+                        </p>
+
+                    </div>
+
+                    <div class="education-image">
+                        <img src="Image\images.png" alt="University">
+                    </div>
+
+                </div>
+
+
+                <!-- Masters -->
+                <div class="education-item right">
+
+                    <div class="education-content">
+
+                        <span class="education-year">Future Plan</span>
+
+                        <h3>Master of Science in CSE</h3>
+
+                        <p>
+                            <strong>Status:</strong>
+                            Not yet enrolled
+                        </p>
+
+                        <p>
+                            <strong>Intended Field:</strong>
+                            Computer Science and Engineering
+                        </p>
+
+                        <hr>
+
+                        <p>
+                            <strong>Possible Thesis Areas:</strong>
+                            Computer Vision, NLP, Blockchain
+                        </p>
+
+                        <p>
+                            The Master of Science (M.Sc.) in CSE typically
+                            includes advanced-level coursework and research.
+                        </p>
+
+                    </div>
+
+                    <div class="education-image">
+                        <img src="Image\images.jpg" alt="Future Master's">
+                    </div>
+
                 </div>
 
             </div>
+
         </section>
 
-        <!-- skills -->
+        <!-- ================= SKILLS ================= -->
+
         <section id="skills" class="section">
-            <h2 style="text-align:center; margin-bottom:40px;">My Skills</h2>
-            <div class="skills-grid">
 
-                <!-- Column 1: Programming Languages (Bar) -->
-                <div class="skill-category">
-                    <h3 class="category-heading">Programming Languages</h3>
-                    <div class="skill">
-                        <p>Java</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>Python</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="80"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>C Programming</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="90"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>C++</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>JavaScript</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="75"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>Assembly</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="60"></div>
-                        </div>
-                    </div>
-                </div>
+            <h2 class="skills-title">My Skills</h2>
 
-                <!-- Column 2: Libraries & Tools (Bar) -->
-                <div class="skill-category">
-                    <h3 class="category-heading">Libraries & Tools</h3>
-                    <div class="skill">
-                        <p>Jupyter Notebook</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="90"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>Conda & Virtual Environments</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>Selenium & Postman</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="75"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>Cisco Packet Tracer</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="60"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>React & Tailwind CSS</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="80"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>LaTeX</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="75"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>JavaFX</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="80"></div>
-                        </div>
-                    </div>
-                </div>
+            <div class="skills-category-grid">
 
-                <!-- Column: Machine Learning & Deep Learning (Bar) -->
-                <div class="skill-category">
-                    <h3 class="category-heading">Machine Learning & Deep Learning</h3>
-                    <div class="skill">
-                        <p>NumPy</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>Pandas</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>Scikit-learn</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="75"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>TensorFlow</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="70"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>Keras</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="70"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>PyTorch</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="65"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>OpenCV</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="70"></div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Programming Languages -->
+                <button class="skills-category-card" data-category="programming">
 
-                <!-- Stacked Column: Database + Frameworks -->
-                <div class="skill-stack">
-
-                    <div class="skill-category">
-                        <h3 class="category-heading">Database Technologies</h3>
-                        <div class="skill-circle-container">
-                            <div class="skill-circle" data-percent="85">
-                                <svg viewBox="0 0 100 100">
-                                    <circle class="background" cx="50" cy="50" r="45"></circle>
-                                    <circle class="progress" cx="50" cy="50" r="45"></circle>
-                                </svg>
-                                <p>MySQL</p>
-                            </div>
-                            <div class="skill-circle" data-percent="80">
-                                <svg viewBox="0 0 100 100">
-                                    <circle class="background" cx="50" cy="50" r="45"></circle>
-                                    <circle class="progress" cx="50" cy="50" r="45"></circle>
-                                </svg>
-                                <p>MS SQL</p>
-                            </div>
-                            <div class="skill-circle" data-percent="90">
-                                <svg viewBox="0 0 100 100">
-                                    <circle class="background" cx="50" cy="50" r="45"></circle>
-                                    <circle class="progress" cx="50" cy="50" r="45"></circle>
-                                </svg>
-                                <p>MongoDB</p>
-                            </div>
-                        </div>
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
                     </div>
 
-                    <div class="skill-category">
-                        <h3 class="category-heading">Frameworks</h3>
-                        <div class="skill-circle-container">
-                            <div class="skill-circle" data-percent="90">
-                                <svg viewBox="0 0 100 100">
-                                    <circle class="background" cx="50" cy="50" r="45"></circle>
-                                    <circle class="progress" cx="50" cy="50" r="45"></circle>
-                                </svg>
-                                <p>Django</p>
-                            </div>
-                            <div class="skill-circle" data-percent="85">
-                                <svg viewBox="0 0 100 100">
-                                    <circle class="background" cx="50" cy="50" r="45"></circle>
-                                    <circle class="progress" cx="50" cy="50" r="45"></circle>
-                                </svg>
-                                <p>Next.js</p>
-                            </div>
-                            <div class="skill-circle" data-percent="70">
-                                <svg viewBox="0 0 100 100">
-                                    <circle class="background" cx="50" cy="50" r="45"></circle>
-                                    <circle class="progress" cx="50" cy="50" r="45"></circle>
-                                </svg>
-                                <p>MERN Dev</p>
-                            </div>
-                            <div class="skill-circle" data-percent="80">
-                                <svg viewBox="0 0 100 100">
-                                    <circle class="background" cx="50" cy="50" r="45"></circle>
-                                    <circle class="progress" cx="50" cy="50" r="45"></circle>
-                                </svg>
-                                <p>React Native</p>
-                            </div>
-                        </div>
+                    <div class="category-info">
+                        <h3>Programming Languages</h3>
+                        <span>6 Skills</span>
                     </div>
 
-                </div>
+                    <i class="fas fa-arrow-right category-arrow"></i>
 
-                <!-- Full Row: Other Skills (Bar) -->
-                <div class="skill-category full-row">
-                    <h3 class="category-heading">Other Skills</h3>
-                    <div class="skill">
-                        <p>Object-Oriented Programming (OOP)</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="90"></div>
-                        </div>
+                </button>
+
+
+                <!-- Libraries & Tools -->
+                <button class="skills-category-card" data-category="libraries">
+
+                    <div class="category-icon">
+                        <i class="fas fa-toolbox"></i>
                     </div>
-                    <div class="skill">
-                        <p>Linux</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="80"></div>
-                        </div>
+
+                    <div class="category-info">
+                        <h3>Libraries & Tools</h3>
+                        <span>9 Skills</span>
                     </div>
-                    <div class="skill">
-                        <p>Data Structures and Algorithms</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="80"></div>
-                        </div>
+
+                    <i class="fas fa-arrow-right category-arrow"></i>
+
+                </button>
+
+
+                <!-- Machine Learning -->
+                <button class="skills-category-card" data-category="machine-learning">
+
+                    <div class="category-icon">
+                        <i class="fas fa-brain"></i>
                     </div>
-                    <div class="skill">
-                        <p>Software Design Patterns</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="75"></div>
-                        </div>
+
+                    <div class="category-info">
+                        <h3>Machine Learning & Deep Learning</h3>
+                        <span>7 Skills</span>
                     </div>
-                    <div class="skill">
-                        <p>Microcontrollers & IoT Development</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="80"></div>
-                        </div>
+
+                    <i class="fas fa-arrow-right category-arrow"></i>
+
+                </button>
+
+
+                <!-- Database -->
+                <button class="skills-category-card" data-category="database">
+
+                    <div class="category-icon">
+                        <i class="fas fa-database"></i>
                     </div>
-                    <div class="skill">
-                        <p>Machine Learning Fundamentals</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="80"></div>
-                        </div>
+
+                    <div class="category-info">
+                        <h3>Database Technologies</h3>
+                        <span>3 Skills</span>
                     </div>
-                    
-                    <div class="skill">
-                        <p>Classification & Regression</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="80"></div>
-                        </div>
+
+                    <i class="fas fa-arrow-right category-arrow"></i>
+
+                </button>
+
+
+                <!-- Frameworks -->
+                <button class="skills-category-card" data-category="frameworks">
+
+                    <div class="category-icon">
+                        <i class="fas fa-layer-group"></i>
                     </div>
-                    
-                    <div class="skill">
-                        <p>Clustering & Unsupervised Learning</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="75"></div>
-                        </div>
+
+                    <div class="category-info">
+                        <h3>Frameworks</h3>
+                        <span>4 Skills</span>
                     </div>
-                    
-                    <div class="skill">
-                        <p>k-Nearest Neighbors (kNN)</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="75"></div>
-                        </div>
+
+                    <i class="fas fa-arrow-right category-arrow"></i>
+
+                </button>
+
+
+                <!-- Other Skills -->
+                <button class="skills-category-card" data-category="other">
+
+                    <div class="category-icon">
+                        <i class="fas fa-cubes"></i>
                     </div>
-                    
-                    <div class="skill">
-                        <p>Artificial Neural Networks (ANN)</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="75"></div>
-                        </div>
+
+                    <div class="category-info">
+                        <h3>Other Skills</h3>
+                        <span>18 Skills</span>
                     </div>
-                    
-                    <div class="skill">
-                        <p>Convolutional Neural Networks (CNN)</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="75"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill">
-                        <p>Recurrent Neural Networks (RNN)</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="65"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>Git & GitHub</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="90"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>Project Management</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="95"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>Teamwork</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="90"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>Time Management</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>Leadership</p>
-                        <div class="progress-bar">
-                            <div class="progress" data-percent="95"></div>
-                        </div>
-                    </div>
-                </div>
+
+                    <i class="fas fa-arrow-right category-arrow"></i>
+
+                </button>
 
             </div>
+
         </section>
+
+
+        <!-- ================= SKILLS POPUP ================= -->
+
+        <div class="skills-modal" id="skillsModal">
+
+            <div class="skills-modal-overlay"></div>
+
+            <div class="skills-modal-box">
+
+                <!-- Header -->
+                <div class="skills-modal-header">
+
+                    <div>
+                        <span class="modal-label">SKILLS</span>
+                        <h3 id="modalTitle">Programming Languages</h3>
+                    </div>
+
+                    <button class="skills-modal-close" id="skillsModalClose">
+                        <i class="fas fa-times"></i>
+                    </button>
+
+                </div>
+
+
+                <!-- Skills -->
+                <div class="modal-skills-grid" id="modalSkills"></div>
+
+            </div>
+
+        </div>
 
 
         <!-- work -->
@@ -521,7 +516,7 @@
                 <!-- ===== Website Projects ===== -->
                 <div class="project-card" data-category="website">
                     <div class="project-img">
-                        <img src="Image/port.png" alt="Portfolio" loading="lazy" decoding="async">
+                        <img src="image/port.png" alt="Portfolio" loading="lazy" decoding="async">
                     </div>
                     <div class="project-content">
                         <span class="tag">Website</span>
@@ -542,10 +537,18 @@
 
                 <div class="project-card" data-category="website">
                     <div class="project-img">
-                        <img src="Image/web1.png" alt="Hire Your Wheels" loading="lazy" decoding="async">
+                        <img src="image/web1.png" alt="Hire Your Wheels" loading="lazy" decoding="async">
                     </div>
                     <div class="project-content">
-                        <span class="tag">Website</span>
+                        <p>
+                            <span class="tag">Website</span>
+                            <a href="https://hire-your-wheels.vercel.app/" target="_blank">
+                                <span class="tag live-tag">
+                                    <span class="live-dot"></span>
+                                    Live Demo
+                                </span>
+                            </a>
+                        </p>
                         <h3>Hire Your Wheels</h3>
                         <div class="tech-icons">
                             <div class="circle">Django</div>
@@ -562,7 +565,7 @@
 
                 <div class="project-card" data-category="website">
                     <div class="project-img">
-                        <img src="Image/no.png" alt="ShareBite" loading="lazy" decoding="async">
+                        <img src="image/no.png" alt="ShareBite" loading="lazy" decoding="async">
                     </div>
                     <div class="project-content">
                         <span class="tag">Website</span>
@@ -583,7 +586,7 @@
                 <!-- ===== Web App Projects ===== -->
                 <div class="project-card" data-category="webapp">
                     <div class="project-img">
-                        <img src="Image/note.png" alt="Note Man" loading="lazy" decoding="async">
+                        <img src="image/note.png" alt="Note Man" loading="lazy" decoding="async">
                     </div>
                     <div class="project-content">
                         <span class="tag">Web App</span>
@@ -624,7 +627,7 @@
                 <!-- ===== Android Applications ===== -->
                 <div class="project-card" data-category="application">
                     <div class="project-img">
-                        <img src="Image/apk.jpg" alt="Note Man" loading="lazy" decoding="async">
+                        <img src="image/apk.jpg" alt="Note Man" loading="lazy" decoding="async">
                     </div>
                     <div class="project-content">
                         <span class="tag">Android App</span>
@@ -633,7 +636,8 @@
                             <div class="circle">Next.js API</div>
                             <div class="circle">React Native</div>
                         </div>
-                        <p>Android application developed to efficiently manage, Web app to efficiently share university notes among all students. </p>
+                        <p>Android application developed to efficiently manage, Web app to efficiently share university
+                            notes among all students. </p>
                         <a class="workgithub-btn" href="https://github.com/MSakibR/Note_Man-React_Native"
                             target="_blank">
                             <i class="fab fa-github"></i> View on GitHub
@@ -643,11 +647,25 @@
 
                 <div class="project-card" data-category="application">
                     <div class="project-img">
-                        <img src="Image/no.png" alt="MessBill" loading="lazy" decoding="async">
+                        <img src="image/no.png" alt="FlatExpenseManager" loading="lazy" decoding="async">
                     </div>
                     <div class="project-content">
-                        <span class="tag">Android App</span>
-                        <h3>MessBill</h3>
+                        <p>
+                            <span class="tag android-tag">
+                                Android App
+                            </span>
+                            <a href="https://github.com/MSakibR/FlatExpenseManager/releases/download/v1.0.0/FlatExpenseManager.apk"
+                                target="_blank">
+                                <span class="tag android-live-tag">
+                                    <svg class="download-icon" viewBox="0 0 24 24" width="14" height="14"
+                                        fill="currentColor">
+                                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                                    </svg>
+                                    Download APK
+                                </span>
+                            </a>
+                        </p>
+                        <h3>FlatExpenseManager</h3>
                         <div class="tech-icons">
                             <div class="circle">React Native</div>
                             <div class="circle">MS SQL</div>
@@ -655,7 +673,7 @@
                         <p>Android application developed to efficiently calculate, track, and manage all mess bills for
                             students
                             effectively.</p>
-                        <a class="workgithub-btn" href="#" target="_blank">
+                        <a class="workgithub-btn" href="https://github.com/MSakibR/FlatExpenseManager" target="_blank">
                             <i class="fab fa-github"></i> View on GitHub
                         </a>
                     </div>
@@ -753,7 +771,8 @@
                             <div class="circle">ESP32</div>
                         </div>
                         <p>Line following robot using microcontrollers for autonomous navigation.</p>
-                        <a class="workgithub-btn" href="https://github.com/MSakibR/Robotics_Project_Documents" target="_blank">
+                        <a class="workgithub-btn" href="https://github.com/MSakibR/Robotics_Project_Documents"
+                            target="_blank">
                             <i class="fab fa-github"></i> View on GitHub
                         </a>
                     </div>
@@ -824,21 +843,21 @@
         <!-- ML / DL / AI Projects Section -->
         <section id="ml-projects" class="section">
             <h2 class="pro">AI / ML / DL Projects</h2>
-        
+
             <!-- ML Filter Buttons -->
             <div class="filter-buttons">
                 <button class="active" onclick="filterMLProjects('all', this)">All</button>
                 <button onclick="filterMLProjects('ml-library', this)">Library-Based / Pre-Trained</button>
                 <button onclick="filterMLProjects('ml-custom', this)">Custom-Trained ML / DL</button>
             </div>
-        
+
             <!-- ML Projects Grid -->
             <div class="pro_projects" id="mlProjectGrid">
-        
+
                 <!-- ===== Library-Based ML/DL Projects ===== -->
 
                 <div class="project-card" data-category="ml-library">
-                
+
                     <div class="project-content">
                         <span class="tag">Library-Based ML/DL</span>
                         <h3>ML & DL Basics </h3>
@@ -852,9 +871,9 @@
                         </a>
                     </div>
                 </div>
-        
+
                 <div class="project-card" data-category="ml-library">
-                    
+
                     <div class="project-content">
                         <span class="tag">Library-Based ML/DL</span>
                         <h3>Face Recognition </h3>
@@ -868,14 +887,14 @@
                         </a>
                     </div>
                 </div>
-        
+
                 <div class="project-card" data-category="ml-library">
-                    
+
                     <div class="project-content">
                         <span class="tag">Library-Based ML/DL</span>
                         <h3>AI Study Monitor</h3>
                         <div class="tech-icons">
-                            
+
                             <div class="circle">OpenCV</div>
                             <div class="circle">MediaPipe</div>
                         </div>
@@ -885,9 +904,9 @@
                         </a>
                     </div>
                 </div>
-        
+
                 <div class="project-card" data-category="ml-library">
-                    
+
                     <div class="project-content">
                         <span class="tag">Library-Based ML/DL</span>
                         <h3>Gesture Temple Run</h3>
@@ -901,26 +920,27 @@
                         </a>
                     </div>
                 </div>
-        
+
                 <div class="project-card" data-category="ml-library">
-                    
+
                     <div class="project-content">
                         <span class="tag">Library-Based ML/DL</span>
                         <h3>Invisibility Cloak</h3>
                         <div class="tech-icons">
-                            
+
                             <div class="circle">OpenCV</div>
                             <div class="circle">NumPy</div>
                         </div>
-                        <p>A real-time project that recreates the classic "invisibility cloak" effect using color detection and masking.</p>
+                        <p>A real-time project that recreates the classic "invisibility cloak" effect using color
+                            detection and masking.</p>
                         <a class="workgithub-btn" href="https://github.com/MSakibR/Vision_AI_Projects" target="_blank">
                             <i class="fab fa-github"></i> View on GitHub
                         </a>
                     </div>
                 </div>
-        
+
                 <div class="project-card" data-category="ml-library">
-                    
+
                     <div class="project-content">
                         <span class="tag">Library-Based ML/DL</span>
                         <h3>Multi-Assistant App</h3>
@@ -928,16 +948,17 @@
                             <div class="circle">Python</div>
                             <div class="circle">OpenAI API</div>
                         </div>
-                        <p>An application integrating multiple OpenAI-powered assistants for different task-specific use cases.
+                        <p>An application integrating multiple OpenAI-powered assistants for different task-specific use
+                            cases.
                         </p>
                         <a class="workgithub-btn" href="https://github.com/MSakibR/Vision_AI_Projects" target="_blank">
                             <i class="fab fa-github"></i> View on GitHub
                         </a>
                     </div>
                 </div>
-        
+
                 <div class="project-card" data-category="ml-library">
-                    
+
                     <div class="project-content">
                         <span class="tag">Library-Based ML/DL</span>
                         <h3>Interactive 3D Particle</h3>
@@ -945,15 +966,16 @@
                             <div class="circle">OpenCV</div>
                             <div class="circle">MediaPipe</div>
                         </div>
-                        <p>An Real-Time interactive 3D particle system that responds in real time to hand and body gestures.</p>
+                        <p>An Real-Time interactive 3D particle system that responds in real time to hand and body
+                            gestures.</p>
                         <a class="workgithub-btn" href="https://github.com/MSakibR/Vision_AI_Projects" target="_blank">
                             <i class="fab fa-github"></i> View on GitHub
                         </a>
                     </div>
                 </div>
-        
+
                 <div class="project-card" data-category="ml-library">
-                    
+
                     <div class="project-content">
                         <span class="tag">Library-Based ML/DL</span>
                         <h3>Virtual Keyboard AI</h3>
@@ -961,16 +983,17 @@
                             <div class="circle">OpenCV</div>
                             <div class="circle">MediaPipe</div>
                         </div>
-                        <p>A smart virtual on-screen keyboard is operated entirely through real-time hand gesture recognition system.</p>
+                        <p>A smart virtual on-screen keyboard is operated entirely through real-time hand gesture
+                            recognition system.</p>
                         <a class="workgithub-btn" href="https://github.com/MSakibR/Vision_AI_Projects" target="_blank">
                             <i class="fab fa-github"></i> View on GitHub
                         </a>
                     </div>
                 </div>
-        
+
                 <!-- ===== Custom-Trained ML/DL Projects ===== -->
                 <div class="project-card" data-category="ml-custom">
-                    
+
                     <div class="project-content">
                         <span class="tag">Custom-Trained ML/DL</span>
                         <h3>BanglaAccento: Bangla Regional Dialect Speech Recognition</h3>
@@ -978,16 +1001,17 @@
                             <div class="circle">Speech Recognition</div>
                             <div class="circle">NLP</div>
                         </div>
-                        <p>End-to-end speech-to-speech system for Bangla regional dialects (Barishal, Noakhali, Rangpur, Sylhet,
+                        <p>End-to-end speech-to-speech system for Bangla regional dialects (Barishal, Noakhali, Rangpur,
+                            Sylhet,
                             Chittagong), built on 6 hours of curated dialectal speech data.</p>
                         <a class="workgithub-btn" href="https://github.com/MSakibR/BanglaAccento" target="_blank">
                             <i class="fab fa-github"></i> View on GitHub
                         </a>
                     </div>
                 </div>
-        
+
                 <div class="project-card" data-category="ml-custom">
-                    
+
                     <div class="project-content">
                         <span class="tag">Custom-Trained ML/DL</span>
                         <h3>Visual Grounding Repair for MLLMs</h3>
@@ -996,16 +1020,18 @@
                             <div class="circle">SAM</div>
                             <div class="circle">Grounding DINO</div>
                         </div>
-                        <p>Detects, diagnoses, and repairs grounding hallucinations in multimodal LLMs (LLaVA, Qwen2.5-VL,
+                        <p>Detects, diagnoses, and repairs grounding hallucinations in multimodal LLMs (LLaVA,
+                            Qwen2.5-VL,
                             InternVL) using a lightweight repair module.</p>
-                        <a class="workgithub-btn" href="https://github.com/MSakibR/visual_grounding_repair" target="_blank">
+                        <a class="workgithub-btn" href="https://github.com/MSakibR/visual_grounding_repair"
+                            target="_blank">
                             <i class="fab fa-github"></i> View on GitHub
                         </a>
                     </div>
                 </div>
-        
+
                 <div class="project-card" data-category="ml-custom">
-                    
+
                     <div class="project-content">
                         <span class="tag">Custom-Trained ML/DL</span>
                         <h3>Shutki Vision: Traditional Bengali Dried Fish Dataset</h3>
@@ -1020,499 +1046,686 @@
                         </a>
                     </div>
                 </div>
-        
+
             </div>
         </section>
 
 
-    <!-- experience -->
-    <section id="experience" class="section">
-        <h2>My Experience</h2>
-        <div class="experience-timeline">
-            <div class="experience-item">
-                <div class="experience-date">2023 - Current</div>
-                <div class="experience-content">
-                    <h3>Academic Web & App Development Projects</h3>
-                    <p><strong>Full-Stack Development with IoT</strong></p>
-                    <p>Develop responsive, interactive, and user-friendly web applications using HTML,
-                        CSS,JavaScript, and frameworks like React or Vue.js.Optimize website performance for faster
-                        load times and better user experience.Ensure cross-browser compatibility and mobile
-                        responsiveness.Collaborate with UI/UX designers to translate designs into functional web
-                        pages.</p>
+        <!-- experience -->
+        <section id="experience" class="section">
+            <h2>My Experience</h2>
+            <div class="experience-timeline">
+        
+                <!-- Eutropia IT -->
+                <div class="experience-item">
+                    <div class="experience-date">2026 - Present</div>
+                    <div class="experience-content">
+                        <h3>Backend Intern</h3>
+                        <a href="https://eutropia-it.com/" target="_blank" class="company-badge">
+                            Eutropia IT ↗
+                        </a>
+                        <p>Gaining hands-on experience in backend engineering, focusing on server-side logic, API development,
+                            database management, and optimizing system performance for real-world software applications.</p>
+                    </div>
                 </div>
+        
+                <!-- Academic Projects -->
+                <div class="experience-item">
+                    <div class="experience-date">2023 - Present</div>
+                    <div class="experience-content">
+                        <h3>Project Lead in Full Stack</h3>
+                        <p><strong>Academic Web & App Development Projects</strong></p>
+                        <p>Develop responsive, interactive, and user-friendly web applications using HTML, CSS, JavaScript, and
+                            modern frameworks. Optimize performance for faster load times, ensure cross-browser compatibility
+                            and mobile responsiveness, and seamlessly integrate IoT systems with web platforms for real-time
+                            monitoring and control.</p>
+                    </div>
+                </div>
+        
             </div>
+        </section>
 
-            <div class="experience-item">
-                <div class="experience-date">2025 - Current</div>
-                <div class="experience-content">
-                    <h3>Machine Learning & Deep Learning Projects</h3>
-                    <p><strong>Enhancing AI/ML skills through practical projects and applications.</strong></p>
-                    <p>ML/DL Development: Worked on projects involving regression, classification, CNNs, and RNNs.
-                        Data Handling: Collected, cleaned, and analyzed datasets for training models.
-                        Model Deployment: Integrated ML/DL models into applications for predictive analytics and
-                        automation.
-                        Tools & Frameworks: Python, TensorFlow, Keras, PyTorch, Scikit-learn, Jupyter Notebook.</p>
-                </div>
-            </div>
+        <!-- Research Section -->
+        <section id="research" class="section">
+            <h2>Research</h2>
+            <div class="research-container">
 
-            <div class="experience-item">
-                <div class="experience-date">2023 - 2024</div>
-                <div class="experience-content">
-                    <h3>Full-Stack Developer</h3>
-                    <p><strong>Freelancer.com</strong></p>
-                    <p>Frontend Development: Design and develop interactive, responsive user interfaces using HTML,
-                        CSS, JavaScript, and frameworks like React, Angular, or Vue.js.Backend Development: Build
-                        and maintain server-side applications using Node.js, Python (Django/Flask), Java (Spring
-                        Boot), or PHP (Laravel).Database Management: Design, optimize, and manage databases using
-                        SQL (MySQL, PostgreSQL).</p>
-                </div>
-            </div>
+                <!-- Research Item 1 -->
+                <div class="research-item">
+                    <h3>Solar-Powered Smart Irrigation System with IoT</h3>
+                    <div class="research-tags">
+                        <span class="tag">IoT Research</span>
+                        <span class="tag tag-dataset">No Dataset Contribution</span>
 
-        </div>
-    </section>
-
-    <!-- Research Section -->
-    <section id="research" class="section">
-        <h2>Research</h2>
-        <div class="research-container">
-
-            <!-- Research Item 1 -->
-            <div class="research-item">
-                <h3>Solar-Powered Smart Irrigation System with IoT</h3>
-                <div class="research-tags">
-                    <span class="tag">IoT Research</span>
-                    <span class="tag tag-dataset">No Dataset Contribution</span>
-                    
-                </div>
-                <p class="research-meta">IoT Research, University of Asia Pacific &middot; (2025) 
+                    </div>
+                    <p class="research-meta">IoT Research, University of Asia Pacific &middot; (2025)
                     </p>
-                <p>This project introduces a solar-powered smart irrigation system using dual-axis sun tracking,
-                    ESP32 IoT connectivity, capacitive soil moisture sensing, and automated watering...</p>
+                    <p>This project introduces a solar-powered smart irrigation system using dual-axis sun tracking,
+                        ESP32 IoT connectivity, capacitive soil moisture sensing, and automated watering...</p>
 
-                <a href="#research" class="research-link" onclick="openModal('Solar-Powered Smart Irrigation System with IoT', `This project presents an eco-friendly farming system powered by solar energy, combining dual-axis sun tracking and automated irrigation.An ESP32 microcontroller collects data from multiple sensors including four LDRs for sunlight tracking, a capacitive soil moisture sensor for ground condition detection, a rain sensor, a DHT11 temperature–humidity sensor, an ultrasonic water-level sensor, and an MQ-2 gas sensor. The system autonomously waters plants using a low-power pump, while dual servos keep the solar panels aligned with the sun for maximum energy efficiency. Real-time monitoring is available through WiFi using a local server or Telegram Bot alerts. Testing shows a 25–30% increase in power generation compared to static panels, reducing energy consumption and water waste. This solution is cost-effective, sustainable, and highly suitable for small farms, rooftop gardens, and rural agriculture.`
+                    <a href="#research" class="research-link" onclick="openModal('Solar-Powered Smart Irrigation System with IoT', `This project presents an eco-friendly farming system powered by solar energy, combining dual-axis sun tracking and automated irrigation.An ESP32 microcontroller collects data from multiple sensors including four LDRs for sunlight tracking, a capacitive soil moisture sensor for ground condition detection, a rain sensor, a DHT11 temperature–humidity sensor, an ultrasonic water-level sensor, and an MQ-2 gas sensor. The system autonomously waters plants using a low-power pump, while dual servos keep the solar panels aligned with the sun for maximum energy efficiency. Real-time monitoring is available through WiFi using a local server or Telegram Bot alerts. Testing shows a 25–30% increase in power generation compared to static panels, reducing energy consumption and water waste. This solution is cost-effective, sustainable, and highly suitable for small farms, rooftop gardens, and rural agriculture.`
                         )">Read More</a>
-            </div>
-
-            <!-- Research Item 2 (unchanged) -->
-            <div class="research-item">
-                <h3>Federated Learning: A Privacy-Preserving Approach in AI</h3>
-                <div class="research-tags">
-                    <span class="tag">Review Paper</span>
-                    <span class="tag tag-dataset">No Dataset Contribution</span>
-                    
                 </div>
-                <p class="research-meta">Review Paper, University of Asia Pacific &middot; (2025) 
-                    </p>
-                <p>A Data Marketplace in Bangladesh is essential for facilitating secure and efficient data exchange
-                    across industries and e-commerce can benefit from real-time data insights...</p>
 
-                <a href="#research" class="research-link" onclick="openModal(
+                <!-- Research Item 2 (unchanged) -->
+                <div class="research-item">
+                    <h3>Federated Learning: A Privacy-Preserving Approach in AI</h3>
+                    <div class="research-tags">
+                        <span class="tag">Review Paper</span>
+                        <span class="tag tag-dataset">No Dataset Contribution</span>
+
+                    </div>
+                    <p class="research-meta">Review Paper, University of Asia Pacific &middot; (2025)
+                    </p>
+                    <p>A Data Marketplace in Bangladesh is essential for facilitating secure and efficient data exchange
+                        across industries and e-commerce can benefit from real-time data insights...</p>
+
+                    <a href="#research" class="research-link" onclick="openModal(
                             'Federated Learning: A Privacy-Preserving Approach in AI',
                             `Federated Learning (FL) has emerged as a disruptive paradigm in artificial intelligence, enabling collaborative training of models on decentralized devices while keeping data where it is generated. Unlike traditional centralized AI systems that collect and anonymize data in the cloud, FL preserves confidentiality by ensuring that raw data never leaves the user’s device.In addressing privacy, security, and regulatory compliance concerns, FL offers strong advantages for sensitive data. This review presents a comprehensive overview of privacy-preserving techniques in Federated Learning, including secure aggregation, differential privacy, homomorphic encryption, and secure multi-party computation.The study examines major FL paradigms, covering system architectures, optimization strategies, adversarial threats, and real-world applications such as healthcare analytics, financial modeling, and Internet of Things (IoT) environments. Additionally, it discusses core challenges like communication efficiency, non-IID data, and system heterogeneity.Finally, the review outlines future research directions to enhance the robustness, scalability, and personalization of FL systems. This work contributes to the growing discussion on FL, emphasizing its importance as a foundational technology for building trustworthy and privacy-aware AI systems.`
                        )">
-                    Read More
+                        Read More
+                    </a>
+
+                </div>
+                <div class="research-item">
+                    <h3>BanglaAccento: Bangla Regional Dialect Speech Recognition System</h3>
+                    <div class="research-tags">
+                        <span class="tag">NLP Research</span>
+                        <a href="https://www.kaggle.com/datasets/msakibrahman/bangla-regional-speech-dataset"
+                            target="_blank" class="tag tag-dataset" title="View dataset on Kaggle">
+                            View Dataset Contribution ↗
+                        </a>
+                    </div>
+                    <p class="research-meta">NLP Research, University of Asia Pacific &middot; [2026] &middot;
+                        Ongoing</p>
+                    <p>Building an end-to-end speech-to-speech communication system for Bangla regional dialects using
+                        curated dialectal
+                        speech data Barishal, Noakhali, Rangpur,....</p>
+                    <a href="#research" class="research-link"
+                        onclick="openModal('BanglaAccento: Bangla Regional Dialect Speech Recognition System', `Bangla is an extremely widespread language, but there exist many dialects which cause serious difficulties in automatic speech recognition (ASR). One of the main reasons for this issue is a lack of resources for dialect recognition. To address this gap, this study investigates speech recognition performance using a dataset of speech collected across five dialect regions of Bangladesh: Barishal, Chittagong, Noakhali, Rangpur, and Sylhet. For experiments, a set of utterances in these dialects was used. State-of-the-art transformer-based models are applied and evaluated for this task, including Whisper (Base and Small), Wav2Vec2, and HuBERT. Experiments show that Whisper Small achieves the best performance with a word error rate (WER) of 0.292 and a character error rate (CER) of 0.251. We also found significant differences in the performance of the models for the different dialects. We report the highest accuracy for the Barishal dialect and the lowest accuracy for the Noakhali dialect across all models.`)">Read
+                        More</a>
+                </div>
+
+                <div class="research-item">
+                    <h3>Visual Grounding Repair for Multimodal Large Language Models</h3>
+                    <div class="research-tags">
+                        <span class="tag">CV Research</span>
+
+                        <a href="https://www.kaggle.com/datasets/your-dataset-link" target="_blank"
+                            class="tag tag-dataset" title="View dataset on Kaggle">
+                            View Dataset Contribution ↗
+                        </a>
+                    </div>
+                    <p class="research-meta">CV Research, University of Asia Pacific &middot; [2026] &middot;
+                        Ongoing</p>
+                    <p>Proposing Visual Grounding Repair to detect, diagnose, and correct grounding hallucinations in
+                        MLLMs
+                        such as
+                        LLaVA, Qwen2.5-VL, and...</p>
+                    <a href="#research" class="research-link"
+                        onclick="openModal('Visual Grounding Repair for Multimodal Large Language Models (MLLMs)', `Proposing Visual Grounding Repair (VGR): a framework for detecting, diagnosing, and correcting grounding hallucinations in Multimodal Large Language Models (MLLMs), including LLaVA, Qwen2.5-VL, and InternVL. The project focuses on identifying common grounding errors such as wrong object localization, partial overlap, incorrect attributes, and erroneous spatial or semantic relations. A dedicated VGR dataset will be constructed by systematically mining and categorizing model prediction errors using IoU-based thresholds across RefCOCO, RefCOCO+, RefCOCOg, and Visual Genome. The proposed lightweight repair module will integrate CLIP-based re-ranking, SAM and Grounding DINO for candidate region proposal, and a verification mechanism to evaluate and refine the model’s grounding predictions. The ultimate goal is to improve grounding accuracy and reliability while keeping the repair process computationally efficient.`)">Read
+                        More</a>
+                </div>
+
+                <div class="research-item">
+                    <h3>Shutki Vision: A Visual Dataset of Traditional Bengali Dried Fish</h3>
+                    <div class="research-tags">
+                        <span class="tag">CV Research</span>
+
+                        <a href="https://www.kaggle.com/datasets/msakibrahman/a-visual-dataset-of-traditional-bengali-dried-fish"
+                            target="_blank" class="tag tag-dataset" title="View dataset on Kaggle">
+                            View Dataset Contribution ↗
+                        </a>
+                    </div>
+                    <p class="research-meta">CV Research, University of Asia Pacific &middot; (2026) &middot;
+                        Ongoing</p>
+                    <p>Curated and released a 1,537-image dataset across 4 dried fish types under 8 backgrounds and 4
+                        lighting
+                        conditions...</p>
+                    <a href="#research" class="research-link"
+                        onclick="openModal('Shutki Vision: A Visual Dataset of Traditional Bengali Dried Fish', `This paper presents ShutkiVision, a deep learning-based framework for automatically classifying traditional Bengali dried fish, locally known as “Shutki”, using a custom-built image dataset. The dataset comprises 1,536 images distributed across four visually similar categories — Chikka, Fara, Guraila, and Jati — collected under diverse real-world conditions including eight distinct background types and four different lighting environments. We employ ResNet50, a powerful residual learn- ing architecture, with ImageNet-pretrained weights to perform multi-class classification through transfer learning. Alongside ResNet50, we also evaluate MobileNet as a lightweight baseline model for comparison. Extensive experiments demonstrate that the proposed ResNet50-based model achieves a classification accuracy of 99%, exhibiting strong robustness across varying environmental conditions. We further conduct background-wise and lighting-wise performance analyses to systematically evaluate model generalization capability. Results reveal that while the model performs exceptionally well under most conditions, low- light environments and brown backgrounds introduce slight degradation in accuracy. This work contributes a novel annotated dataset and a reliable deep learning baseline for future research in traditional food image recognition, with practical implications for the fisheries and food supply chain sectors in Bangladesh`)">Read
+                        More</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Modal Window -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h2 id="modal-header"></h2>
+                <p id="modal-description"></p>
+
+                <!-- Download Buttons -->
+                <div class="modal-buttons">
+                    <a id="download-report" href="#" download class="modal-btn">View Paper</a>
+
+                    <button onclick="closeModal()" class="modal-btn close-btn">Close</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="section">
+
+            <h2 style="text-align:center; margin-bottom:40px;">Achievements & Certificates</h2>
+
+            <!-- View All Button -->
+            <div style="text-align:center; margin-top:20px; margin-bottom:20px;">
+                <button id="view-all-btn" class="view-all-btn">
+                    View All Achievements
+                    <i class="fas fa-arrow-right" style="margin-left:8px;"></i>
+                </button>
+            </div>
+
+            <!-- slider container -->
+            <div class="slider-container">
+                <button class="slider-btn left-btn" onclick="prevSlide()">&#10094;</button>
+
+                <div class="slider-wrapper">
+                    <div class="achievement-card">
+                        <img src="media/Achievements/vc_2.png" alt="Vice Chancellor’s Certificate">
+                        <h3>Vice Chancellor’s Award (2 Times)</h3>
+                        <p>Honored twice for exceptional academic excellence and overall performance at the university
+                            level.
+                        </p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="media/Achievements/dean_2.png" alt="Dean’s Award">
+                        <h3>Dean’s Award (3 Times)</h3>
+                        <p>Received three times for outstanding academic achievement in the CSE department.</p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="media/Achievements/ro.jpeg" alt="Robo Expo 3.0">
+                        <h3>Robo Expo 3.0</h3>
+                        <p>Participated in Robo Expo 3.0, showcasing innovative robotic solutions and 2nd place in the
+                            LFR contest.</p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="media/Achievements/tt.jpeg" alt="Table Tennis Achievement">
+                        <h3>Table Tennis Runner-Up</h3>
+                        <p>Secured 2nd position in the university campus table tennis sports competition.</p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="Image/no.png" alt="Carrom Achievement">
+                        <h3>Carrom Championship Winner</h3>
+                        <p>Achieved 1st place in the school-level carrom sports competition.</p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="media/Achievements/software.png" alt="Generative AI Software Development Achievement">
+                        <h3>Generative AI Software Development</h3>
+                        <p>Developed innovative software solutions using generative AI technologies.</p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="media/Achievements/prompt.png" alt="Prompt Engineering Application">
+                        <h3>Prompt Engineering Application</h3>
+                        <p>Applied prompt engineering techniques to optimize the performance of generative AI models.
+                        </p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="media/Achievements/canva.png" alt="Canva Design Achievement">
+                        <h3>Use Canva to Design Digital Course Collateral</h3>
+                        <p>Utilized Canva to create engaging digital course materials and promotional assets.</p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="media/Achievements/excel.png" alt="Microsoft Excel Achievement">
+                        <h3>Getting Started with Microsoft Excel</h3>
+                        <p>Developed proficiency in using Microsoft Excel for data analysis and visualization.</p>
+                    </div>
+                </div>
+
+                <button class="slider-btn right-btn" onclick="nextSlide()">&#10095;</button>
+            </div>
+
+            <!-- Gallery Modal -->
+            <div id="gallery-modal" class="modal">
+                <div class="modal-content"
+                    style="max-width:90%; max-height:90%; overflow:auto; background-color:#1e1e1e;">
+                    <span class="close-gallery" onclick="closeGallery()">&times;</span>
+                    <h2 style="text-align:center; color:#00aaff; margin-bottom:20px;">All Achievements</h2>
+                    <div class="gallery-grid">
+                        <!-- Gallery Item with multiple images -->
+                        <div class="gallery-item">
+                            <div class="gallery-images">
+                                <img src="media/Achievements/vc_2.png" alt="Vice Chancellor’s Certificate"
+                                    onclick="openLightbox(this)">
+                                <img src="media/Achievements/vc.png" alt="Vice Chancellor’s Certificate"
+                                    onclick="openLightbox(this)">
+                                <img src="media/Achievements/DSC00956.JPG" alt="Vice Chancellor’s Certificate"
+                                    onclick="openLightbox(this)">
+                            </div>
+                            <h3>Vice Chancellor’s Award</h3>
+                        </div>
+
+                        <div class="gallery-item">
+                            <div class="gallery-images">
+                                <img src="media/Achievements/dean.png" alt="Dean’s Certificate"
+                                    onclick="openLightbox(this)">
+                                <img src="media/Achievements/dean_2.png" alt="Dean’s Certificate"
+                                    onclick="openLightbox(this)">
+                                <img src="media/Achievements/dean.png" alt="Dean’s Certificate"
+                                    onclick="openLightbox(this)">
+                                <img src="media/Achievements/DSC07225.JPG" alt="Dean’s Certificate"
+                                    onclick="openLightbox(this)">
+
+                            </div>
+                            <h3>Dean’s Award</h3>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img src="media/Achievements/tt.jpeg" alt="Table Tennis Achievement"
+                                onclick="openLightbox(this)">
+                            <h3>Table Tennis Runner-Up</h3>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img src="Image\no.png" alt="Carrom Championship Winner Achievement"
+                                onclick="openLightbox(this)">
+                            <h3>Carrom Championship Winner</h3>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img src="media/Achievements/software.png" alt="Generative AI Achievement"
+                                onclick="openLightbox(this)">
+                            <h3>Generative AI Software Development</h3>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img src="media/Achievements/excel.png" alt="Microsoft Excel Achievement"
+                                onclick="openLightbox(this)">
+                            <h3>Getting Started with Microsoft Excel</h3>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img src="media/Achievements/prompt.png" alt="Prompt Engineering Achievement"
+                                onclick="openLightbox(this)">
+                            <h3>Prompt Engineering Application</h3>
+                        </div>
+
+                        <div class="gallery-item">
+                            <img src="media/Achievements/canva.png" alt="Canva Achievement"
+                                onclick="openLightbox(this)">
+                            <h3>Use Canva to Design Digital Course Collateral</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lightbox Modal -->
+            <div id="lightbox-modal" class="modal">
+                <span class="close-gallery" onclick="closeLightbox()">&times;</span>
+                <img class="lightbox-img" src="">
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Profile Overview</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Motivated and detail-oriented CSE student with strong skills in full-stack development,
+                            backend
+                            engineering, data communication, and networking. Experienced in Django, Next.js, Express.js,
+                            and
+                            React
+                            Native. Skilled in building real-world applications, developing REST APIs, and designing
+                            databases.
+                            Strong
+                            understanding of networking concepts with hands-on experience using Cisco Packet Tracer.
+                            Passionate
+                            about
+                            creating scalable systems and solving real-world problems through technology.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What projects have you worked on?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            <strong>HireYourWheels – Car Hiring Web Application (Django)</strong><br>
+                            A feature-rich car rental platform with OTP verification, custom user model, reservation
+                            system, and
+                            admin dashboard.<br>
+                            🔗 GitHub: <a href="https://github.com/MSakibR/HireYourWheels" target="_blank"
+                                style="color:#00eaff">https://github.com/MSakibR/HireYourWheels</a>
+                        </p>
+                        <p>
+                            <strong>Easy Hisab – Invoice & GST Automation Web App (Next.js + Django API)</strong><br>
+                            Automated invoicing platform with tax calculations, customer management, product catalog,
+                            and
+                            reporting dashboard.<br>
+                            🔗 GitHub: <a href="https://github.com/MSakibR/Easy_Hisab" target="_blank"
+                                style="color:#00eaff">https://github.com/MSakibR/Easy_Hisab</a>
+                        </p>
+                        <p>
+                            <strong>NoteMan – Educational Note Sharing System (Next.js + React Native)</strong><br>
+                            A platform for schools/colleges to upload and distribute notes, study materials, and
+                            documents.<br>
+                            🔗 GitHub: <a href="https://github.com/MSakibR/Note_Man-Nextjs" target="_blank"
+                                style="color:#00eaff">https://github.com/MSakibR/Note_Man-Nextjs</a><br>
+                            🔗 GitHub: <a href="https://github.com/MSakibR/Note_Man-React_Native" target="_blank"
+                                style="color:#00eaff">https://github.com/MSakibR/Note_Man-React_Native</a>
+                        </p>
+                        <p>
+                            <strong>UCAM System – University Automation (Java + JavaFX)</strong><br>
+                            A GUI-based university class automation system with record management and admin
+                            features.<br>
+                            🔗 GitHub: <a href="https://github.com/MSakibR/Ucam_System_using_JavaFX" target="_blank"
+                                style="color:#00eaff">https://github.com/MSakibR/Ucam_System_using_JavaFX</a>
+                        </p>
+                        <p>
+                            <strong>Travel Agency Management System (C++)</strong><br>
+                            Console-based travel booking system with package selection and billing.<br>
+                            🔗 GitHub: <a href="https://github.com/MSakibR/Travel_Agency" target="_blank"
+                                style="color:#00eaff">https://github.com/MSakibR/Travel_Agency</a>
+                        </p>
+                        <p>
+                            <strong>Microcontroller Projects – Embedded Systems & IoT Development</strong><br>
+                            Hands-on microcontroller projects using Arduino and ESP32, including sensor integration,
+                            automation,
+                            and real-time monitoring systems.<br>
+                            🔗 GitHub: <a href="https://github.com/MSakibR/Microcontroller" target="_blank"
+                                style="color:#00eaff">https://github.com/MSakibR/Microcontroller</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Technical Skills</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Programming Languages:</strong> Java, Python, C & C++, JavaScript</p>
+                        <p><strong>Database Technologies:</strong> MySQL, MS SQL, MongoDB</p>
+                        <p><strong>Frameworks:</strong> Django, Next.js, Express.js, React Native</p>
+                        <p><strong>Libraries & Tools:</strong> Jupyter Notebook, Conda, Cisco Packet Tracer, React,
+                            Tailwind
+                            CSS, JavaFX, Selenium, Postman, LaTeX</p>
+                        <p><strong>Other Skills:</strong> OOP, DSA, Software Design Patterns, Microcontrollers & IoT
+                            Development, Git & GitHub, Project Management, Teamwork, Leadership</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How can I contact you?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            <strong>Phone:</strong> +8801981410182<br>
+                            <strong>Email:</strong> <a
+                                href="mailto:sakib.rahman.arfin@gmail.com">sakib.rahman.arfin@gmail.com</a><br>
+                            <strong>Portfolio:</strong> msakibr.github.io<br>
+                            <strong>GitHub:</strong> github.com/msakibr<br>
+                            <strong>Address:</strong> 58/A, Lake Circus Road, Dhanmondi, Dhaka
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Hobbies</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Exploring new places through <strong>travel</strong>, capturing moments with
+                            <strong>photography</strong>,
+                            enjoying strategic and adventure <strong>games</strong>, and staying active with my favorite
+                            sport —
+                            <strong>cricket</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section id="contact" class="section">
+
+            <div class="contact-wrapper">
+
+                <!-- LEFT: CONTACT MENU -->
+                <div class="contact-menu">
+
+                    <h2>Contact Me</h2>
+
+                    <div class="contact-menu-buttons">
+
+                        <button class="contact-tab active" data-contact="info">
+                            <i class="fas fa-address-card"></i>
+                            <span>Contact Info</span>
+                        </button>
+
+                        <button class="contact-tab" data-contact="email">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email Me</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT: CONTENT -->
+
+                <div class="contact-content">
+
+                    <!-- CONTACT INFO -->
+
+                    <div class="contact-panel active" id="contact-info">
+
+                        <h3>
+                            <i class="fas fa-address-card"></i>
+                            Contact Information
+                        </h3>
+
+                        <div class="contact-details">
+
+                            <a href="https://maps.app.goo.gl/nasXKam4df8fN4kE6" target="_blank" class="contact-detail">
+
+                                <span class="contact-detail-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </span>
+
+                                <span>
+                                    <strong>Address</strong>
+                                    <small>
+                                        24-1 Lake Circus Rd, Dhaka 1205
+                                    </small>
+                                </span>
+
+                            </a>
+
+
+                            <a href="mailto:sakib.rahman.arfin@gmail.com" class="contact-detail">
+
+                                <span class="contact-detail-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+
+                                <span>
+                                    <strong>Email</strong>
+                                    <small>
+                                        sakib.rahman.arfin@gmail.com
+                                    </small>
+                                </span>
+
+                            </a>
+
+
+                            <a href="tel:+8801981410182" class="contact-detail">
+
+                                <span class="contact-detail-icon">
+                                    <i class="fas fa-phone"></i>
+                                </span>
+
+                                <span>
+                                    <strong>Phone</strong>
+                                    <small>
+                                        +8801981410182
+                                    </small>
+                                </span>
+
+                            </a>
+
+
+                            <a href="https://wa.me/+8801756284480" target="_blank" class="contact-detail">
+
+                                <span class="contact-detail-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </span>
+
+                                <span>
+                                    <strong>WhatsApp</strong>
+                                    <small>
+                                        +8801756284480
+                                    </small>
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="contact-panel" id="contact-email">
+
+                        <h3>
+                            <i class="fas fa-paper-plane"></i>
+                            Let's Chat
+                        </h3>
+
+                        <div class="contact-form">
+
+                            <input type="email" id="visitor-email" placeholder="Your Email" required />
+
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+
+                            <button id="send-message">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Notification -->
+
+        <div id="notification" class="notification"></div>
+
+        <!-- CV -->
+        <section id="cv-download" class="section">
+            <div class="cv-container">
+                <h2>Download My CV</h2>
+
+                <a href="media/M Sakib Rahman_CV.pdf" download class="download-cv-button">
+                    Industrial CV
+                </a>
+
+                <a href="media/Acedemia_CV.pdf" download class="download-cv-button">
+                    Academic CV
+                </a>
+            </div>
+        </section>
+
+
+        <!-- ================= FLOATING RESUME BUTTON ================= -->
+
+        <div class="floating-resume">
+
+            <!-- Main Resume Button -->
+            <button class="resume-toggle" id="resumeToggle" aria-label="Open Resume options">
+                <i class="fas fa-file-alt"></i>
+                <span>Resume</span>
+            </button>
+
+            <!-- Resume Options -->
+            <div class="resume-menu" id="resumeMenu">
+
+                <div class="resume-menu-title">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>Choose Resume</span>
+                </div>
+
+                <a href="media/Acedemia_CV.pdf" download class="resume-option">
+                    <span class="resume-option-icon academic">
+                        <i class="fas fa-graduation-cap"></i>
+                    </span>
+
+                    <span class="resume-option-text">
+                        <strong>Academic CV</strong>
+                        <small>For academic & research</small>
+                    </span>
+
+                    <i class="fas fa-download download-icon"></i>
+                </a>
+
+
+                <a href="media/M Sakib Rahman_CV.pdf" download class="resume-option">
+                    <span class="resume-option-icon industrial">
+                        <i class="fas fa-briefcase"></i>
+                    </span>
+
+                    <span class="resume-option-text">
+                        <strong>Industrial CV</strong>
+                        <small>For jobs & industry</small>
+                    </span>
+
+                    <i class="fas fa-download download-icon"></i>
                 </a>
 
             </div>
-            <div class="research-item">
-                <h3>BanglaAccento: Bangla Regional Dialect Speech Recognition System</h3>
-                <div class="research-tags">
-                    <span class="tag">NLP Research</span>
-                    <a href="https://www.kaggle.com/datasets/msakibrahman/bangla-regional-speech-dataset" target="_blank" class="tag tag-dataset"
-                        title="View dataset on Kaggle">
-                        View Dataset Contribution ↗
-                    </a>
-                </div>
-                <p class="research-meta">NLP Research, University of Asia Pacific &middot; [2026] &middot;
-                    Ongoing</p>
-                <p>Building an end-to-end speech-to-speech communication system for Bangla regional dialects using
-                    curated dialectal
-                    speech data Barishal, Noakhali, Rangpur,....</p>
-                <a href="#research" class="research-link"
-                    onclick="openModal('BanglaAccento: Bangla Regional Dialect Speech Recognition System', `Bangla is an extremely widespread language, but there exist many dialects which cause serious difficulties in automatic speech recognition (ASR). One of the main reasons for this issue is a lack of resources for dialect recognition. To address this gap, this study investigates speech recognition performance using a dataset of speech collected across five dialect regions of Bangladesh: Barishal, Chittagong, Noakhali, Rangpur, and Sylhet. For experiments, a set of utterances in these dialects was used. State-of-the-art transformer-based models are applied and evaluated for this task, including Whisper (Base and Small), Wav2Vec2, and HuBERT. Experiments show that Whisper Small achieves the best performance with a word error rate (WER) of 0.292 and a character error rate (CER) of 0.251. We also found significant differences in the performance of the models for the different dialects. We report the highest accuracy for the Barishal dialect and the lowest accuracy for the Noakhali dialect across all models.`)">Read
-                    More</a>
-            </div>
-
-            <div class="research-item">
-                <h3>Visual Grounding Repair for Multimodal Large Language Models</h3>
-                <div class="research-tags">
-                    <span class="tag">CV Research</span>
-                    
-                    <a href="https://www.kaggle.com/datasets/your-dataset-link" target="_blank" class="tag tag-dataset"
-                        title="View dataset on Kaggle">
-                        View Dataset Contribution ↗
-                    </a>
-                </div>
-                <p class="research-meta">CV Research, University of Asia Pacific &middot; [2026] &middot;
-                    Ongoing</p>
-                <p>Proposing Visual Grounding Repair to detect, diagnose, and correct grounding hallucinations in MLLMs
-                    such as
-                    LLaVA, Qwen2.5-VL, and...</p>
-                <a href="#research" class="research-link"
-                    onclick="openModal('Visual Grounding Repair for Multimodal Large Language Models (MLLMs)', `Proposing Visual Grounding Repair (VGR): a framework for detecting, diagnosing, and correcting grounding hallucinations in Multimodal Large Language Models (MLLMs), including LLaVA, Qwen2.5-VL, and InternVL. The project focuses on identifying common grounding errors such as wrong object localization, partial overlap, incorrect attributes, and erroneous spatial or semantic relations. A dedicated VGR dataset will be constructed by systematically mining and categorizing model prediction errors using IoU-based thresholds across RefCOCO, RefCOCO+, RefCOCOg, and Visual Genome. The proposed lightweight repair module will integrate CLIP-based re-ranking, SAM and Grounding DINO for candidate region proposal, and a verification mechanism to evaluate and refine the model’s grounding predictions. The ultimate goal is to improve grounding accuracy and reliability while keeping the repair process computationally efficient.`)">Read
-                    More</a>
-            </div>
-
-            <div class="research-item">
-                <h3>Shutki Vision: A Visual Dataset of Traditional Bengali Dried Fish</h3>
-                <div class="research-tags">
-                    <span class="tag">CV Research</span>
-                    
-                    <a href="https://www.kaggle.com/datasets/msakibrahman/a-visual-dataset-of-traditional-bengali-dried-fish" target="_blank" class="tag tag-dataset"
-                        title="View dataset on Kaggle">
-                        View Dataset Contribution ↗
-                    </a>
-                </div>
-                <p class="research-meta">CV Research, University of Asia Pacific &middot; (2026) &middot;
-                    Ongoing</p>
-                <p>Curated and released a 1,537-image dataset across 4 dried fish types under 8 backgrounds and 4
-                    lighting
-                    conditions...</p>
-                <a href="#research" class="research-link"
-                    onclick="openModal('Shutki Vision: A Visual Dataset of Traditional Bengali Dried Fish', `This paper presents ShutkiVision, a deep learning-based framework for automatically classifying traditional Bengali dried fish, locally known as “Shutki”, using a custom-built image dataset. The dataset comprises 1,536 images distributed across four visually similar categories — Chikka, Fara, Guraila, and Jati — collected under diverse real-world conditions including eight distinct background types and four different lighting environments. We employ ResNet50, a powerful residual learn- ing architecture, with ImageNet-pretrained weights to perform multi-class classification through transfer learning. Alongside ResNet50, we also evaluate MobileNet as a lightweight baseline model for comparison. Extensive experiments demonstrate that the proposed ResNet50-based model achieves a classification accuracy of 99%, exhibiting strong robustness across varying environmental conditions. We further conduct background-wise and lighting-wise performance analyses to systematically evaluate model generalization capability. Results reveal that while the model performs exceptionally well under most conditions, low- light environments and brown backgrounds introduce slight degradation in accuracy. This work contributes a novel annotated dataset and a reliable deep learning baseline for future research in traditional food image recognition, with practical implications for the fisheries and food supply chain sectors in Bangladesh`)">Read
-                    More</a>
-            </div>
 
         </div>
-    </section>
-
-    <!-- Modal Window -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <h2 id="modal-header"></h2>
-            <p id="modal-description"></p>
-
-            <!-- Download Buttons -->
-            <div class="modal-buttons">
-                <a id="download-report" href="#" download class="modal-btn">View Paper</a>
-                
-                <button onclick="closeModal()" class="modal-btn close-btn">Close</button>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="section">
-
-        <h2 style="text-align:center; margin-bottom:40px;">Achievements & Certificates</h2>
-
-        <!-- View All Button -->
-        <div style="text-align:center; margin-top:20px; margin-bottom:20px;">
-            <button id="view-all-btn" class="view-all-btn">
-                View All Achievements
-                <i class="fas fa-arrow-right" style="margin-left:8px;"></i>
-            </button>
-        </div>
-
-        <!-- slider container -->
-        <div class="slider-container">
-            <button class="slider-btn left-btn" onclick="prevSlide()">&#10094;</button>
-
-            <div class="slider-wrapper">
-                <div class="achievement-card">
-                    <img src="media/Achievements/vc_2.png" alt="Vice Chancellor’s Certificate">
-                    <h3>Vice Chancellor’s Award (2 Times)</h3>
-                    <p>Honored twice for exceptional academic excellence and overall performance at the university
-                        level.
-                    </p>
-                </div>
-
-                <div class="achievement-card">
-                    <img src="media/Achievements/dean_2.png" alt="Dean’s Award">
-                    <h3>Dean’s Award (3 Times)</h3>
-                    <p>Received three times for outstanding academic achievement in the CSE department.</p>
-                </div>
-
-                <div class="achievement-card">
-                    <img src="media/Achievements/ro.jpeg" alt="Robo Expo 3.0">
-                    <h3>Robo Expo 3.0</h3>
-                    <p>Participated in Robo Expo 3.0, showcasing innovative robotic solutions and 2nd place in the LFR contest.</p>
-                </div>
-
-                <div class="achievement-card">
-                    <img src="media/Achievements/tt.jpeg" alt="Table Tennis Achievement">
-                    <h3>Table Tennis Runner-Up</h3>
-                    <p>Secured 2nd position in the university campus table tennis sports competition.</p>
-                </div>
-
-                <div class="achievement-card">
-                    <img src="Image/no.png" alt="Carrom Achievement">
-                    <h3>Carrom Championship Winner</h3>
-                    <p>Achieved 1st place in the school-level carrom sports competition.</p>
-                </div>
-
-                <div class="achievement-card">
-                    <img src="media/Achievements/software.png" alt="Generative AI Software Development Achievement">
-                    <h3>Generative AI Software Development</h3>
-                    <p>Developed innovative software solutions using generative AI technologies.</p>
-                </div>
-
-                <div class="achievement-card">
-                    <img src="media/Achievements/prompt.png" alt="Prompt Engineering Application">
-                    <h3>Prompt Engineering Application</h3>
-                    <p>Applied prompt engineering techniques to optimize the performance of generative AI models.</p>
-                </div>
-
-                <div class="achievement-card">
-                    <img src="media/Achievements/canva.png" alt="Canva Design Achievement">
-                    <h3>Use Canva to Design Digital Course Collateral</h3>
-                    <p>Utilized Canva to create engaging digital course materials and promotional assets.</p>
-                </div>
-
-                <div class="achievement-card">
-                    <img src="media/Achievements/excel.png" alt="Microsoft Excel Achievement">
-                    <h3>Getting Started with Microsoft Excel</h3>
-                    <p>Developed proficiency in using Microsoft Excel for data analysis and visualization.</p>
-                </div>
-            </div>
-
-            <button class="slider-btn right-btn" onclick="nextSlide()">&#10095;</button>
-        </div>
-
-        <!-- Gallery Modal -->
-        <div id="gallery-modal" class="modal">
-            <div class="modal-content" style="max-width:90%; max-height:90%; overflow:auto; background-color:#1e1e1e;">
-                <span class="close-gallery" onclick="closeGallery()">&times;</span>
-                <h2 style="text-align:center; color:#00aaff; margin-bottom:20px;">All Achievements</h2>
-                <div class="gallery-grid">
-                    <!-- Gallery Item with multiple images -->
-                    <div class="gallery-item">
-                        <div class="gallery-images">
-                            <img src="media/Achievements/vc_2.png" alt="Vice Chancellor’s Certificate"
-                                onclick="openLightbox(this)">
-                            <img src="media/Achievements/vc.png" alt="Vice Chancellor’s Certificate"
-                                onclick="openLightbox(this)">
-                            <img src="media/Achievements/DSC00956.JPG" alt="Vice Chancellor’s Certificate"
-                                onclick="openLightbox(this)">
-                        </div>
-                        <h3>Vice Chancellor’s Award</h3>
-                    </div>
-
-                    <div class="gallery-item">
-                        <div class="gallery-images">
-                            <img src="media/Achievements/dean.png" alt="Dean’s Certificate" onclick="openLightbox(this)">
-                            <img src="media/Achievements/dean_2.png" alt="Dean’s Certificate" onclick="openLightbox(this)">
-                            <img src="media/Achievements/dean.png" alt="Dean’s Certificate" onclick="openLightbox(this)">
-                            <img src="media/Achievements/DSC07225.JPG" alt="Dean’s Certificate" onclick="openLightbox(this)">
-                            
-                        </div>
-                        <h3>Dean’s Award</h3>
-                    </div>
-
-                    <div class="gallery-item">
-                        <img src="media/Achievements/tt.jpeg" alt="Table Tennis Achievement" onclick="openLightbox(this)">
-                        <h3>Table Tennis Runner-Up</h3>
-                    </div>
-
-                    <div class="gallery-item">
-                        <img src="Image\no.png" alt="Carrom Championship Winner Achievement" onclick="openLightbox(this)">
-                        <h3>Carrom Championship Winner</h3>
-                    </div>
-
-                    <div class="gallery-item">
-                        <img src="media/Achievements/software.png" alt="Generative AI Achievement" onclick="openLightbox(this)">
-                        <h3>Generative AI Software Development</h3>
-                    </div>
-
-                    <div class="gallery-item">
-                        <img src="media/Achievements/excel.png" alt="Microsoft Excel Achievement" onclick="openLightbox(this)">
-                        <h3>Getting Started with Microsoft Excel</h3>
-                    </div>
-
-                    <div class="gallery-item">
-                        <img src="media/Achievements/prompt.png" alt="Prompt Engineering Achievement" onclick="openLightbox(this)">
-                        <h3>Prompt Engineering Application</h3>
-                    </div>
-
-                    <div class="gallery-item">
-                        <img src="media/Achievements/canva.png" alt="Canva Achievement" onclick="openLightbox(this)">
-                        <h3>Use Canva to Design Digital Course Collateral</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Lightbox Modal -->
-        <div id="lightbox-modal" class="modal">
-            <span class="close-gallery" onclick="closeLightbox()">&times;</span>
-            <img class="lightbox-img" src="">
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="section">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Profile Overview</span>
-                    <i class="fas fa-plus"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Motivated and detail-oriented CSE student with strong skills in full-stack development,
-                        backend
-                        engineering, data communication, and networking. Experienced in Django, Next.js, Express.js,
-                        and
-                        React
-                        Native. Skilled in building real-world applications, developing REST APIs, and designing
-                        databases.
-                        Strong
-                        understanding of networking concepts with hands-on experience using Cisco Packet Tracer.
-                        Passionate
-                        about
-                        creating scalable systems and solving real-world problems through technology.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>What projects have you worked on?</span>
-                    <i class="fas fa-plus"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>
-                        <strong>HireYourWheels – Car Hiring Web Application (Django)</strong><br>
-                        A feature-rich car rental platform with OTP verification, custom user model, reservation
-                        system, and
-                        admin dashboard.<br>
-                        🔗 GitHub: <a href="https://github.com/MSakibR/HireYourWheels" target="_blank"
-                            style="color:#00eaff">https://github.com/MSakibR/HireYourWheels</a>
-                    </p>
-                    <p>
-                        <strong>Easy Hisab – Invoice & GST Automation Web App (Next.js + Django API)</strong><br>
-                        Automated invoicing platform with tax calculations, customer management, product catalog,
-                        and
-                        reporting dashboard.<br>
-                        🔗 GitHub: <a href="https://github.com/MSakibR/Easy_Hisab" target="_blank"
-                            style="color:#00eaff">https://github.com/MSakibR/Easy_Hisab</a>
-                    </p>
-                    <p>
-                        <strong>NoteMan – Educational Note Sharing System (Next.js + React Native)</strong><br>
-                        A platform for schools/colleges to upload and distribute notes, study materials, and
-                        documents.<br>
-                        🔗 GitHub: <a href="https://github.com/MSakibR/Note_Man-Nextjs" target="_blank"
-                            style="color:#00eaff">https://github.com/MSakibR/Note_Man-Nextjs</a><br>
-                        🔗 GitHub: <a href="https://github.com/MSakibR/Note_Man-React_Native" target="_blank"
-                            style="color:#00eaff">https://github.com/MSakibR/Note_Man-React_Native</a>
-                    </p>
-                    <p>
-                        <strong>UCAM System – University Automation (Java + JavaFX)</strong><br>
-                        A GUI-based university class automation system with record management and admin
-                        features.<br>
-                        🔗 GitHub: <a href="https://github.com/MSakibR/Ucam_System_using_JavaFX" target="_blank"
-                            style="color:#00eaff">https://github.com/MSakibR/Ucam_System_using_JavaFX</a>
-                    </p>
-                    <p>
-                        <strong>Travel Agency Management System (C++)</strong><br>
-                        Console-based travel booking system with package selection and billing.<br>
-                        🔗 GitHub: <a href="https://github.com/MSakibR/Travel_Agency" target="_blank"
-                            style="color:#00eaff">https://github.com/MSakibR/Travel_Agency</a>
-                    </p>
-                    <p>
-                        <strong>Microcontroller Projects – Embedded Systems & IoT Development</strong><br>
-                        Hands-on microcontroller projects using Arduino and ESP32, including sensor integration,
-                        automation,
-                        and real-time monitoring systems.<br>
-                        🔗 GitHub: <a href="https://github.com/MSakibR/Microcontroller" target="_blank"
-                            style="color:#00eaff">https://github.com/MSakibR/Microcontroller</a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Technical Skills</span>
-                    <i class="fas fa-plus"></i>
-                </div>
-                <div class="faq-answer">
-                    <p><strong>Programming Languages:</strong> Java, Python, C & C++, JavaScript</p>
-                    <p><strong>Database Technologies:</strong> MySQL, MS SQL, MongoDB</p>
-                    <p><strong>Frameworks:</strong> Django, Next.js, Express.js, React Native</p>
-                    <p><strong>Libraries & Tools:</strong> Jupyter Notebook, Conda, Cisco Packet Tracer, React,
-                        Tailwind
-                        CSS, JavaFX, Selenium, Postman, LaTeX</p>
-                    <p><strong>Other Skills:</strong> OOP, DSA, Software Design Patterns, Microcontrollers & IoT
-                        Development, Git & GitHub, Project Management, Teamwork, Leadership</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>How can I contact you?</span>
-                    <i class="fas fa-plus"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>
-                        <strong>Phone:</strong> +8801981410182<br>
-                        <strong>Email:</strong> <a
-                            href="mailto:sakib.rahman.arfin@gmail.com">sakib.rahman.arfin@gmail.com</a><br>
-                        <strong>Portfolio:</strong> msakibr.github.io<br>
-                        <strong>GitHub:</strong> github.com/msakibr<br>
-                        <strong>Address:</strong> 58/A, Lake Circus Road, Dhanmondi, Dhaka
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Hobbies</span>
-                    <i class="fas fa-plus"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>
-                        Exploring new places through <strong>travel</strong>, capturing moments with
-                        <strong>photography</strong>,
-                        enjoying strategic and adventure <strong>games</strong>, and staying active with my favorite
-                        sport —
-                        <strong>cricket</strong>.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
 
-    <!-- Contact and Chatox -->
-    <section id="contact" class="section">
-        <div class="contact-container">
-            <div class="contact-info animated"><!-- Left Side: Contact Info -->
-                <p>
-                <h2>Contact Me</h2>
-                </p>
-                <p><a href="https://maps.app.goo.gl/nasXKam4df8fN4kE6" class="sep" target="_blank"><i
-                            class="fas fa-map-marker-alt"></i> Address: 24-1 Lake Circus Rd, Dhaka 1205</a></p>
-                <p><a href="mailto:sakib.rahman.arfin@gmail.com" class="sep"><i class="fas fa-envelope"></i> Email:
-                        sakib.rahman.arfin@gmail.com</a></p>
-                <p><a href="tel:+8801981410182" class="sep"><i class="fas fa-phone"></i> Phone: +8801981410182</a>
-                </p>
-                <p><a href="https://wa.me/+8801756284480" class="sep" target="_blank"><i class="fab fa-whatsapp"></i>
-                        Whatsapp: +8801756284480</a></p>
-            </div>
-            <div class="chat-box"><!-- Right Side: Chat Box -->
-                <h3>Let's Chat</h3>
-                <input type="email" id="visitor-email" placeholder="Your Email" required />
-                <textarea id="message" placeholder="Your Message"></textarea>
-                <button id="send-message">Send</button>
-            </div>
-        </div>
-    </section>
-    <div id="notification" class="notification"></div>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Sakib Rahman. All rights reserved.</p>
+        </footer>
 
-    <!-- CV -->
-    <section id="cv-download" class="section">
-        <div class="cv-container">
-            <h2>Download My CV</h2>
-            <a href="media/M Sakib Rahman_CV.pdf" download class="cv-button">Industrial CV</a>
-            <a href="media/Acedemia_CV.pdf" download class="cv-button">Academic CV</a>
-        </div>
-    </section>
+        <!-- Floating Contact Button -->
+        <button class="floating-contact" onclick="goToContact()" aria-label="Contact Me">
+            <i class="fas fa-comment-dots"></i>
+            <span>Contact Me</span>
+        </button>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Sakib Rahman. All rights reserved.</p>
-    </footer>
     </div>
 
     <!-- JSON-LD for SEO (Does NOT affect script.js) -->
@@ -1526,9 +1739,6 @@
       "jobTitle": "Full Stack Developer",
       "description": "I am a passionate Computer Science and Engineering student...",
       "sameAs": [
-        "https://github.com/MSakibR",
-        "https://huggingface.co/sakib04",
-        "https://scholar.google.com/citations?user=_HmyJE4AAAAJ&hl=en",
         "https://www.linkedin.com/in/saku-rahman",
         "https://www.facebook.com/sakib.rahman.arfin",
         "https://x.com/Visible_Saku",
