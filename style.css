@@ -1719,6 +1719,14 @@ footer {
     justify-content: center;
     gap: 6px;
     border-radius: 6px;
+    background-color: #1365b6;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .workgithub-btn:hover {
+  background-color: #034b1b;
   }
 
   .view-all-btn {
